@@ -6,27 +6,41 @@
 <style>
 .box-one { 
 background-color: lightpink;
+align-content: center;
 }
 .box-two{
     background-color: bisque;
-}
+    align-content: center;}
+    .class-one{color: green;}
+      
+
 .box-three{
-    background-color: bisque;
+    background-color: bisque; 
+    align-content: center;
+    .class-two{color: green;}
 }
 .box-four{
     background-color: bisque;
+    align-content: center;
+    .class-three{color: red;}
 
 }
 .box-five{
     background-color: bisque;
+    align-content: center;
 
 }
 .box-six{
     background-color: bisque;
+    align-content: center;
+}
+td{
+    border-color: black;
+    border-style: solid;
 }
 </style>
 <body>
-    <table style="height: 500px; width: 800px; border-style: solid; border-collapse: collapse; border-color: black; border-width: 2px; ">
+    <table style="height: 500px; width: 800px; border-style: solid; border-collapse: collapse; border-color: black; border-width: 2px; ;">
     <tr class="box-one">
     <td colspan="2" class="box-two"> Roll No./Sr.No</td>
     <td class="1">Student Name</td>
@@ -50,7 +64,7 @@ background-color: lightpink;
         88<br>
         89<br>
     </td>
-    <td style="color: rgb(2, 89, 60);">Pass</td>
+    <td class="class-one">Pass</td>
     <td></td>
     <!-- <td>16</td> -->
 
@@ -66,7 +80,7 @@ background-color: lightpink;
     <td>78<br>
         87<br>
         95<br></td>
-    <td style="color: rgb(2, 40, 27);">Pass</td>
+    <td class="class-two">Pass</td>
     <td></td>
     <!-- <td>24</td> -->
 
@@ -82,7 +96,7 @@ background-color: lightpink;
         45<br>
         84<br>
     </td>
-    <td style="color: brown;">Fail</td>
+    <td class="class-three">Fail</td>
     <td></td>
     <!-- <td>32</td> -->
 
