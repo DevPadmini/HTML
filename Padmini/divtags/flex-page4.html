@@ -17,57 +17,70 @@
         }
 
         .div-one {
-            width: 100%;
-            height: 20%;
+            width: 25%;
+            height: 100%;
             background-color: chocolate;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .one-one{
+            width: 100% ;
+            height: 50%;
+            background-color: cadetblue;
+        }
+        .one-two{
+            width:100%;
+            height: 25% ;
+            background-color: aquamarine;
         }
 
         .div-two {
-            width: 20%;
-            height: 80%;
+            width: 25%;
+            height: 100%;
             background-color: brown;
         }
-
-        .row-one {
-            width: 100%;
+        .two-two{
+            width:100%;
+            height: 25% ;
+            background-color: coral;
+            flex-direction: column;
+            justify-content: bottom;
+        }
+        .div-three {
+            width: 25%;
             height: 100%;
-            background-color: rgb(209, 100, 100);
+            background-color: rgb(217, 144, 48);
+        }
+        .div-four {
+            width: 25%;
+            height: 100%;
+            background-color: cornsilk;
+        }
+        .div-five {
+            width: 25%;
+            height: 100%;
+            background-color: burlywood;
         }
 
-        .row-1 {
-            width: 34%;
-            height: 100%;
-            background-color: chartreuse;
-        }
-
-        .row-2 {
-            width: 33%;
-            height: 100%;
-            background-color: cornflowerblue;
-        }
-
-        .row-3 {
-            width: 33%;
-            height: 100%;
-            background-color: chartreuse;
-        }
+        
     </style>
 </head>
 
 <body>
     <div class="main-container">
-        <div class="div-one"></div>
-        <div class="div-two"></div>
-        <div class=""></div>
-        <div class="row-one">
-            <div class="row-1">
-                <div class="row-2">
-                    <div class="row-3"></div>
-                </div>
-
-
-            </div>
+        <div class="div-one">
+            <div class="one-one"></div>
+            <div class="one-two"></div>
         </div>
+        <div class="div-two">
+            <div class="two-two"></div>
+        </div>
+        <div class="div-three"></div>
+        <div class="div-four"></div>
+        <div class="div-five"></div>
+        
+      
     </div>
 </body>
 
