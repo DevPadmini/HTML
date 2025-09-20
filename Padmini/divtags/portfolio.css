@@ -4,13 +4,15 @@ body {
     width: 100vw;
     height: auto;
 }
-h1{
+
+h1 {
     color: white;
 }
+
 /*header css start----------------*/
 header {
     width: 100%;
-    height: 100px;
+    height: 90px;
     position: fixed;
     background-color: #052347;
     display: flex;
@@ -66,6 +68,11 @@ h1 {
     width: 100%;
     height: 800px;
     background-color: #28417a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .about-title {
@@ -76,6 +83,33 @@ h1 {
     padding: 20px;
 }
 
+.about-content {
+    width: 80%;
+    height: 80%;
+    background-color: #78B9B5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.content-left {
+    width: 40%;
+    height: 90%;
+    background-color: lightblue;
+
+}
+
+.content-right {
+    width: 40%;
+    height: 90%;
+    background-color: lightgray;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /* about section css end---------*/
 
 /* project section css start---------*/
@@ -116,7 +150,7 @@ h1 {
     font-size: 100%;
     color: white;
     text-align: center;
-    
+
 }
 
 /* project section css end---------*/
