@@ -5,37 +5,47 @@
     <title>Document</title>
     <style>
         .body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0;
-            width: 100vw;
             height: 100vh;
-            background-color: antiquewhite;
-
-
         }
 
         .container {
-            width: 1200vw;
-            height: 1200vh;
+            width: 600px;
+            height: 600px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             background-color: antiquewhite;
+            border: 2px solid black;
         }
 
         .box {
             background-color:deepskyblue;
+            align-items: center;
+            display: flex;
+            justify-content: center;
             border: 2px solid black;
         }
+        .big-col{
+            grid-columns: span 1;
+            grid-column-end: 3;
+        }
+        .big-row{
+            grid-row: span 2;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box">1</div>
-        <div class="box">2</div>
+        <div class="box big-col">1</div>
+        <div class="box big-row">2</div>
         <div class="box">3</div>
         <div class="box">4</div>
         <div class="box">5</div>
