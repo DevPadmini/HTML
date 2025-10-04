@@ -1,146 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Document</title>
-    <style>
-        .body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 600px;
-            height: 600px;
+     <style>
+        .main-container {
+            width: 700px;
+            height: 800px;
+            background-color: lightblue;
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            /* grid-template-rows: repeat(8, 1fr); */
-            background-color: antiquewhite;
-            border: 2px solid black;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(8, 1fr);
         }
+         .box {
+            background-color: lightblue;
+            border: solid 1px black;
+            font-size: 20px;
+        }
+        .one{
+            grid-column: span 6;
+        }
+        .one-1{
+            grid-row: span 2;
+        }
+        .one-2{
+            grid-row: span 3;
 
-        .box {
-
-            border: solid 2px black;
-
         }
-
-        .box-one {
-            grid-column-start: 3;
-            grid-column-end: 4;
-        }
-
-        .box-two {
-            grid-column: 2/5;
-        }
-
-        .box-three {
-            grid-row: 3/ span 6;
-        }
-
-        .box-A {
-            grid-column: 5/span 7;
-        }
-
-        .box-G {
-            grid-row: 2/3;
-        }
-        .box-x{
-            grid-column: 2/8;
-        }
-        .box-P{
-            grid-column: 4/7;
-        }
-        .box-3{
-            grid-column: 5/8;
-        }
-    </style>
+        </style>
 </head>
-
 <body>
-    <div class="container">
-        <!--row 1-->
-        <div class="box box-x"></div>
-        <div class="box"></div>
-        <div class="box box-one"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <!--row 2-->
-        <div class="box"></div>
-        <div class="box box-two"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box box-A"></div>
-        <div class="box box-P"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-
-        <!--row 3-->
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box box-three"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box box-3"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-
-        <!--row 4-->
-        <div class="box"></div>
-        <div class="box box-G "></div>
-        <div class="box"></div>
-        <div class="box "></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <!--row 5-->
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <!--row 6-->
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <!--row 7-->
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <!--row 8-->
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-
+    <div class="main-container">
+        <div class="box one">1</div>
+        <div class="box one-1">2</div>
+        <div class="box ">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
 
     </div>
 </body>
-
 </html>
