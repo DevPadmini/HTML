@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+}
+
+h1 {
+    color: white;
+}
+
+/*header css start----------------*/
+header {
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    background-color:#081117;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-size: 25px;
+    color: white;
+}
+
+/*header css end----------------*/
+main {
+    width: 100%;
+    height: auto;
+}
+
+/* home section css start---------*/
+.home {
+    width: 100%;
+    height: 800px;
+    background:linear-gradient(#052347, rgb(32, 32, 31));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    width: 50%;
+    height: 30%;
+    color: azure;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+/* home section css end---------*/
+
+/* about section css start---------*/
+.about {
+    width: 100%;
+    height: 800px;
+    background:linear-gradient(#052347, rgb(13, 13, 12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.about-title {
+    width: 100%;
+    height: 10%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+     color: azure;
+
+}
+
+.content-left {
+    width: 40%;
+    height: 90%;
+   
+    text-align: center;
+
+}
+
+.content-right {
+    width: 40%;
+    height: 90%;
+}
+.content-1 {
+    padding: 20%;
+ width: 70%;
+    height: 50%;
+    color: azure;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* about section css end---------*/
+
+/* project section css start---------*/
+.project {
+    width: 100%;
+    height: 800px;
+   background:linear-gradient(#052347, rgb(41, 41, 41));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.project-title {
+    width: 100%;
+    height: 10%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.project-card {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    width: 20%;
+    height: 300px;
+    background-color: rgb(7, 10, 45);
+    border-radius: 20px;
+    font-size: 100%;
+    color: white;
+    text-align: center;
+
+}
+
+
+
+/* project section css end---------*/
+
+/* contact section css start---------*/
+.contact {
+    width: 100%;
+    height: 800px;
+     background:linear-gradient(#011328, rgb(33, 33, 33));
+}
+
+.contact-title {
+    width: 100%;
+    height: 10%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.from{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+    
+
+}
+.from input, from textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid #cccccccd;
+    font-size: 40px;
+    
+}
+/*Buttons*/
+.btn{
+    padding: 30px;
+    background-color: rgb(226, 41, 41);
+    color: rgb(246, 245, 251);
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;
+}
+
+/* contact section css end---------*/
