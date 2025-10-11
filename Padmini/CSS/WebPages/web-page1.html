@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main-contanier {
+        height: 300px;
+        width: 400px;
+        background-color: antiquewhite;
+        border: 2px solid black;
+
+    }
+
+    .contanier {
+        height: 50%;
+        justify-content: space-between;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: aqua;
+
+    }
+
+    .display-area {
+        width: 90%;
+        height: 65%;
+        background-color: bisque;
+        border: 10px;
+    }
+
+    .input-area {
+        width: 90%;
+    }
+
+    /* .input-filed{} */
+
+    .click-button {
+        width: 15%;
+        height: 70%;
+        background-color: rgb(217, 235, 229);
+        border: red solid;
+        color: brown;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+</style>
+<html lang="en">
+
+
 <body>
-    
+     <div class="main-contanier">
+    <div id="display"></div>
+    <input type="text" id="input-one">
+    <input type="text" id="input-two">
+    <button onclick="showOutput()">Click me</button>
+
+    </div>
+     </div> 
+
 </body>
+<script>
+    function showOutput() {
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        document.getElementById("display").innerHTML = x + " " + y;
+    }
+</script>
+
 </html>
