@@ -6,7 +6,14 @@ int main(){
 
     printf("%d \n", number);
 
-   
+    //Input
+    int input ;
+    printf("Enter a number; ");
+    scanf("%d", &input);
+
+    //Output
+    printf("%d", input);
 
     return 0;
+
 }
