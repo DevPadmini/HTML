@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><b>Name : </b><i id="demo-1"></i></p>
+    <p><b>Name Two : </b><i id="demo-2"></i></p>
+    <input type="text" id="input-one" />
+    <input type="text" id="input-two" />
+    <button onclick="myFunction()">Submit</button>
+
+    <script>
+      function myFunction() {
+        let name = document.getElementById("input-one").value;
+        let nameTwo = document.getElementById("input-two").value;
+        document.getElementById("demo-1").innerHTML = name;
+        document.getElementById("demo-2").innerHTML = nameTwo;
+      }
+    </script>
+  </body>
+</html>
