@@ -39,16 +39,16 @@
 
     <script>
       function showOutput() {
-        let Name = document.getElementById("name").value;
+        let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
-        let PermanentAddress = document.getElementById("PermanentAddress").value;
-        let BirthofDate = document.getElementById("BirthofDate").value;
-        let Class = document.getElementById("Class").value;
-        let ContactNumber = document.getElementById("ContactNumber").value;
-        let YourGenderName = document.getElementById("YourGenderName").value;
+        let permanentAddress = document.getElementById("permanent-address").value;
+        let birthofDate = document.getElementById("birth-of-date").value;
+        let class = document.getElementById("class").value;
+        let contactNumber = document.getElementById("contact-number").value;
+        let yourGenderName = document.getElementById("your-gender-name").value;
 
 
-        document.getElementById("display").innerHTML = Name ;
+        document.getElementById("displayArea").innerHTML = name + email + permanentAddress + birthofDate + class + contactNumber +yourGenderName ;
         
     }
 
