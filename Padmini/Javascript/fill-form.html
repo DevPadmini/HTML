@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Form Data</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ><br><br>
+
+        <label for="">Permanent Address:</label>
+        <input type="text" id="Permanent Address" name="Permanent Address" ><br><br>
+       
+        <label for="">Birth of Date:</label>
+        <input type="Date" id="Birth of Date" name="Birth of Date" ><br><br>
+
+        <label>Class:</label>
+        <input type="text" id="Class" name="Class"  ><br><br>
+
+        <label>Contact Number:</label>
+        <input type="text" id="Contact Number" name="Contact Number"  ><br><br>
+
+        <label for="">Your Gender Name:</label>
+        <input type="text" id="Your Gender Name" name="Your Gender Name" ><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="displayArea" style="margin-top: 20px; border: 1px solid wheat; padding: 10px;">
+        <!-- Form data will be displayed here -->
+    </div>
+
+    <script>
+      function showOutput() {
+        let Name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let PermanentAddress = document.getElementById("PermanentAddress").value;
+        let BirthofDate = document.getElementById("BirthofDate").value;
+        let Class = document.getElementById("Class").value;
+        let ContactNumber = document.getElementById("ContactNumber").value;
+        let YourGenderName = document.getElementById("YourGenderName").value;
+
+
+        document.getElementById("display").innerHTML = Name ;
+        
+    }
+
+    </script>
+</body>
+
+</html>
