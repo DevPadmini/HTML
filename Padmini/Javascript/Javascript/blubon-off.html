@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body {
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
 
-        .img {
-            display: none;
-        }
+      img {
+        display: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="main-container" 
-    <img id="blub1"
-        src="https://t3.ftcdn.net/jpg/15/18/89/76/360_F_1518897642_tmQI8171F0cSInFFOqyFVJaf1N71W2Gd.jpg">
-        <img id="blub2"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHIZ9AxmcwwWXap5Y7nuzjKuknB28yQhMl57pnfdXM_aYMZOK92GHo-JwFdOAQeXXxDKw&usqp=CAU">
+  <body>
+    <div class="main-container">
+      <img
+        id="blub1"
+        src="https://t3.ftcdn.net/jpg/15/18/89/76/360_F_1518897642_tmQI8171F0cSInFFOqyFVJaf1N71W2Gd.jpg"
+      />
+      <img
+        id="blub2"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHIZ9AxmcwwWXap5Y7nuzjKuknB28yQhMl57pnfdXM_aYMZOK92GHo-JwFdOAQeXXxDKw&usqp=CAU"
+      />
     </div>
 
     <button class="click-button" onclick="buton()">ON</button>
     <button class="click-button" onclick="butoff()">OFF</button>
-
-
-</body>
-<script>
-
+  </body>
+  <script>
     function buton() {
-        document.getElementById("blub1").style.display ="none";
-        document.getElementById("blub1").style.display ="block";
+      document.getElementById("blub2").style.display = "none";
+      document.getElementById("blub1").style.display = "block";
     }
 
     function butoff() {
-        document.getElementById("blub2").style.display ="none" ;
-        document.getElementById("blub2").style.display ="block";
+      document.getElementById("blub1").style.display = "none";
+      document.getElementById("blub2").style.display = "block";
     }
-
-
-</script>
-
-
+  </script>
 </html>
