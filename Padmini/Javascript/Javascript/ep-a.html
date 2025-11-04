@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+
+    }
+    p{
+        font-family: sans-serif;
+        font-size: 50px;
+        
+
+    }
+
+    .main-contanier {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .contanier-one {
+        width: 100%;
+        height: 50% ;
+        display:flex ;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        background-color: antiquewhite;
+
+    }
+
+    .contanier-two {
+        width: 100%;
+        height: 50% ;
+        display:flex ;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding-top:20px ;
+        background-color: cornsilk;
+    }
+   
+        button{
+        width: 180px;
+        height: 50px;
+        border-radius: 8px;
+        background-color: rgb(38, 205, 224);
+        border: none;
+      }
+    
+</style>
+
+<body>
+    <div class="main-contanier">
+        <div class="contanier-one" id="contanier-one">
+            <p>Welcome to Universal Calender</p>
+            <p id="display"></p>
+        </div>
+        <div class="contanier-two" id="contanier-two"></div>
+        <button id="sunday" onclick="sunday()">Sunday</button>
+        <button id="monday" onclick="monday()">Monday</button>
+        <button id="tuesday" onclick="tuesday()">Tuesday</button>
+        <button id="wednesday" onclick="wednesday()">wednesday</button>
+        <button id="thusday" onclick="thusday()">Thusday</button>
+        <button id="friday" onclick="friday()">Friday</button>
+        <button id="satuarday" onclick="satuarday()">Satuarday</button>
+      
+    </div>
+</body>
+<script>
+  function sunday() {
+    let Sunday = document.getElementById("sunday").innerHTML ;
+    document.getElementById("contanier-one").innerHTML = "Today is " + Sunday ;
+        document.getElementById("contanier-one").style.backgroundColor="lightgreen"  ;
+        document.getElementById("contanier-two").style.backgroundColor="#BBC863" ;
+        document.getElementById("sunday").style.backgroundColor="#C4A484" ;
+        
+    }
+   
+
+</script>
+
+</html>
