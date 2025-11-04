@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main-contanier {
+        height: 300px;
+        width: 400px;
+        background-color: lightgray;
+        border: 1px solid black;
+
+    }
+
+    .contanier {
+        height: 50%;
+        justify-content: space-between;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: aqua;
+
+    }
+
+    .display-area {
+        width: 90%;
+        height: 65%;
+        background-color: lightgray;
+        border: 10px;
+    }
+
+    .input-area {
+        width: 90%;
+    }
+
+    /* .input-filed{} */
+
+    .onclick {
+        width: 15%;
+        height: 70%;
+        background-color: rgb(217, 235, 229);
+        border: red solid;
+        color: brown;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="main-contanier">
+        <div id="display"></div>
+        <input type="text" id="inputfield">
+    <input type="text" id="inputfield2">
+    <button onclick="showOutput()">Click me</button>
+</body>
+    <script>
+        function monday(){
+            let y = Number(document.getElementById("inputfield").value);
+            let z = Number(document.getElementById("inputfield2").value);
+
+            document.getElementById('display').innerHTML=y % z + typeof z;
+
+
+        }
+    </script>
+
+</html>
