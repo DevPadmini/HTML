@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contanier {
+            width: 20%;
+            height: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 5px 5px 8px 2px;
+
+
+        }
+       
+        .bulb-image {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        img {
+            width: 80%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .button-group {
+            height: 50px;
+            width: 100px;
+            font-size: 25px;
+                                                                         
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+
+        }
+
+        .button:hover {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="bulb-image">
+            <img src="" alt="" id="image">
+        </div>
+        <div class="button-group">
+            <button onclick="redBulb()">Red</button>
+            <button onclick="greenBulb()" >Green</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    function redBulb(){
+        document.getElementById("image").src = "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRl3FUNtmBUkfB4hEH7paqEZ_RLKK1H5aLiHdLicSUKerwKGMtJvSB8SxvDH_gD5EC6OFP8V5KxAf46Hj-3MA1Lwgl_U4zNhInBQuulDs5AO3lN0DJSetKy";
+    }
+    function greenBulb(){
+        document.getElementById("image").src = "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR6TgaoGhlELZDbAAEli75YpvU1Q9z-IiiG6VWFyXdTN2LE8m7eu-bowjLth9x1ehuCXoJRLidB0bl-JwecYrFabPD1CmeyhUkr_DkcpHL4Q4SNKJ8bEfm0pg";
+    }
+
+
+</script>
+
+</html>
