@@ -188,6 +188,7 @@ nav a:hover {
         font-style: normal;
         font-variation-settings: "wdth" 100;
       }
+
       .products {
         height: auto;
         width: 80%;
@@ -208,6 +209,26 @@ nav a:hover {
         border: 1px solid rgb(80, 80, 80);
         transition-duration: 0.4s;
       }
+       .card-image {
+            width: 50%;
+            height: 70%;
+        }
+
+        .card-content {
+            width: 80%;
+            height: 20%;
+            text-align: center;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        h3{
+            font-family: "Open Sans", sans-serif;
+            color: aliceblue;
+        }
       .product-card:hover {
         border-color: rgba(0, 167, 167, 0.507);
         transition-duration: 0.2s;
@@ -323,19 +344,35 @@ nav a:hover {
         <!--card 1-->
        <a href="">
          <div class="product-card">
-          <div class="card-content1"></div>
+        <div class="card-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+        </div>
+       
+          <div class="card-content1">
+            <h3>HTML</h3>
+          </div>
         </div>
        </a>
         <!--card 2-->
          <a href="">
         <div class="product-card">
-          <div class="card-content2"></div>
+           <div class="card-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">
+        </div>
+          <div class="card-content2">
+            <h3>CSS</h3>
+          </div>
         </div>
         </a>
         <!--card 3-->
          <a href="">
         <div class="product-card">
-          <div class="card-content3"></div>
+         <div class="card-image">
+          <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png">
+         </div>
+          <div class="card-content3">
+            <h3>JavaScript</h3>
+          </div>
         </div>
          </a>
       </div>
