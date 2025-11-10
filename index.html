@@ -1,23 +1,147 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>first web page</title>
-    </head>
-    <body>
-        <a href="./Pages/HTML/MediaTags/Media exericse/anchor-tags.html">
-            <h1>anchor tag</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Product cards</title>
+  </head>
+  <body>
+    <!--Header-->
+     <header>
+    <div class="logo">Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+    <!-- Home -->
+    <section class="home">
+      <div class="home-container">
+        <span class="title-1">Welcome to My Portfolio</span>
+        <span class="title-2">I am Padmini Bhange</span>
+        <span class="title-3">I am a Full stack developer</span>
+        <div class="btn-group">
+         <a href="#project"> <button class="quick-btn">See Projects</button></a>
+          <a href="#contact"><button class="quick-btn">Contact Us</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-left">
+      <img src="https://cdn-icons-png.freepik.com/256/3135/3135823.png?semt=ais_white_label" width="80%" height="500px">
+      </div>
+      <div class="about-right">
+        <p class="aboutme">I am currently pursuing a Diploma in Computer Engineering at Sonatai Pandav College, Kolambi, Katol.</p>
+          <p>After completing my 12th grade, I chose this field to build a strong foundation in technology and software development.
+          I am now in my second year, continuously learning and improving my technical skills.</p>
+         <he class="skills"><b>My Skills</b></h2><br><br>
+       <button class="quick-btn">HTML</button>
+        <button class="quick-btn">CSS</button>
+           <button class="quick-btn">JavaScript</button>
+      </div>
+      </div>
+    </section>
+
+
+    <!--Project-->
+    <main class="products-container" id="project">
+      <div class="product-header">
+        <h1 class="title">Projects</h1>
+      </div>
+      <div class="products">
+        <!--card 1-->
+       <a href="">
+         <div class="product-card">
+        <div class="card-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+        </div>
+       
+          <div class="card-content1">
+            <h3>HTML</h3>
+          </div>
+        </div>
+       </a>
+        <!--card 2-->
+         <a href="">
+        <div class="product-card">
+           <div class="card-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">
+        </div>
+          <div class="card-content2">
+            <h3>CSS</h3>
+          </div>
+        </div>
         </a>
-        <a href="./Pages/HTML/MediaTags/Media exericse/image-tags.html">
-            <h1>image-tags</h1>
-        </a>
-        <a href="./Pages/HTML/MediaTags/Media exericse/video-tags.html">
-            <h1>video-tag</h1>
-        </a>
-        <a href="./Pages/HTML/fromTag/from-tag.html">
-            <h2>From-tag</h2>
-        </a>
-        <a href="./Pages/HTML/TextFromatingTags/text-tags.html">
-            <h2>text-tags</h2>
-        </a>
-    </body>
+        <!--card 3-->
+         <a href="./Padmini/Pages/js-project-page.html">
+        <div class="product-card">
+         <div class="card-image">
+          <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png">
+         </div>
+          <div class="card-content3">
+            <h3>JavaScript</h3>
+          </div>
+        </div>
+         </a>
+      </div>
+    </main>
+
+    <!--Contact-->
+    <section class="contact" id="contact">
+  <main class="products-container">
+    <div class="product-header">
+      <h1 class="title">Contact</h1>
+    </div>
+    <div class="products">
+      <!--card 1-->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Logo">
+        </div>
+        <div class="card-content1">
+          <h3>Email :</h3>
+          <p><a href="mailto:pbhange@gmail.com" style="color: white;">pbhange265@gmail.com</a></p>
+        </div>
+      </div>
+
+      <!--card 2-->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Logo">
+        </div>
+        <div class="card-content2">
+          <h3>GitHub :</h3>
+          <p><a href="https://github.com/" style="color: white;">github.com/pbhange</a></p>
+        </div>
+      </div>
+
+      <!--card 3-->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn Logo">
+        </div>
+        <div class="card-content3">
+          <h3>LinkedIn :</h3>
+          <p><a href="https://linkedin.com/in/pbhange" style="color: white;">linkedin.com/in/pbhange</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+  </body>
 </html>
