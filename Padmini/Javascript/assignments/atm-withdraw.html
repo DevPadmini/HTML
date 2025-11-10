@@ -111,11 +111,13 @@
     let balance = 10000
      document.getElementById("display").innerHTML = balance;
     function withdraw() {
-        let amount = prompt();
+        let amount = document.getElementById("number").value
         balance = balance - Number(amount);
         document.getElementById("display").innerHTML = balance;
         document.getElementById("message").style.display = "block";
+         document.getElementById("number").value = "";
     }
 
     </script>
+
 </html>
