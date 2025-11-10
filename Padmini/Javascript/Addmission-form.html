@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main-cont{
+         height: 500px;
+        width: 400px;
+        background-color: rgb(207, 204, 200);
+        border: 1px solid black;
+    }
+    h2{
+        text-align: center;
+        padding-right: 5px;
+    }
+    button{
+        width: 400px;
+        height: 45px;
+        background-color: rgb(50, 124, 50);
+        color: azure;
+
+    }
+    
+  </style>
+
+  <body>
+    <div class="main-cont">
+    <h2>Student Information form</h2>
+    <p><b>Full Name : </b><i id="demo-1"></i></p>
+    <input type="text" id="input-one" />
+    <p><b>Age : </b><i id="demo-2"></i></p>
+    <input type="text" id="input-two" />
+    <p><b>Email : </b><i id="demo-3"></i></p>
+    <input type="text" id="input-three" />
+    <p><b>Gender : </b><i id="demo-4"></i></p>
+    <input type="text" id="input-four" />
+    <p><b>Course : </b><i id="demo-5"></i></p>
+    <input type="text" id="input-five" />
+    <br><br>
+    <button onclick="myFunction()">Submit</button>
+    
+    </div>
+
+    <script>
+      function myFunction() {
+        let fullname = document.getElementById("input-one").value;
+        let age = document.getElementById("input-two").value;
+        document.getElementById("demo-1").innerHTML = fullname;
+        document.getElementById("demo-2").innerHTML = age;
+
+        let email = document.getElementById("input-three").value;
+        let gender = document.getElementById("input-four").value;
+        document.getElementById("demo-3").innerHTML = email;
+        document.getElementById("demo-4").innerHTML = gender;
+
+        let course = document.getElementById("input-five").value;
+        document.getElementById("demo-5").innerHTML = course;
+      }
+    </script>
+  </body>
+</html>
