@@ -170,7 +170,7 @@
             <div class="left-bottom">
             <p><b>Amount</b></p>
              <input type="number" id="input-one">
-             <button class="btn-1" onclick="Deposit()"><b>Deposit</b></button>
+             <button class="btn-1" onclick="deposit()"><b>Deposit</b></button>
         </div>
         </div>
          <div class="right">
@@ -194,7 +194,7 @@ function withdraw(){
     document.getElementById("input-two").innerHTML = "";
     alert("Withdraw Succesfull")
 }
-function Deposit(){
+function deposit(){
     let depositAmount = document.getElementById("input-one").value;
     balance = balance+ Number(depositAmount);
     document.getElementById("display").innerHTML = balance;
@@ -204,4 +204,5 @@ function Deposit(){
 }
 </script>
 </body>
+
 </html>
