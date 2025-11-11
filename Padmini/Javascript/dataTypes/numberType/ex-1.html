@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum calculator</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="main-contanier">
+        <div class="contanier">
+            <div class="display-area" id="display">
+                <p>The sun is : </p>
+            </div>
+            <h3>First Number:</h3>
+            <input type="number" id="number">
+            <h3>Second Number:</h3>
+            <input type="number" id="number">
+            <br><br>
+            <button onclick="add()">Calculate Sum</button>
+        </div> 
+    </div>
+</body>
+<script>
+    document.getElementById('display').innerHTML = a ;
+        function add(){
+            let y = Number(document.getElementById("number").value);
+            let z = Number(document.getElementById("number").value);
+            let a = y + z ;
+
+            document.getElementById('display').innerHTML= a;
+        }
+    </script>
+</html>
+      
