@@ -191,14 +191,14 @@ function withdraw(){
     let withdrawAmount = document.getElementById("input-two").value;
     balance = balance- Number(withdrawAmount);
     document.getElementById("display").innerHTML = balance;
-    document.getElementById("input-two").innerHTML = "";
+    document.getElementById("input-two").value = "";
     alert("Withdraw Succesfull")
 }
 function deposit(){
     let depositAmount = document.getElementById("input-one").value;
     balance = balance+ Number(depositAmount);
     document.getElementById("display").innerHTML = balance;
-    document.getElementById("input-one").innerHTML = "";
+    document.getElementById("input-one").value = "";
  
  
 }
@@ -206,3 +206,4 @@ function deposit(){
 </body>
 
 </html>
+
