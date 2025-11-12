@@ -1,31 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex 2 number Datatype</title>
+    <title>Ex.2 number Datatype</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: aliceblue;
+            font-family: "Open Sans", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .main-contanier {
+            width: 600px;
+            height: 500px;
+            background-color: white;
+
+
+        }
+
+        p {
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        button {
+            width: 350px;
+            height: 40px;
+            border: 1px solid rgba(128, 128, 128, 0.586);
+            border-radius: 8px;
+            gap: 20px;
+
+        }
+
+        input {
+            width: 330px;
+            height: 35px;
+            border: 1px solid rgba(128, 128, 128, 0.586);
+            border-radius: 8px;
+
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .display-area {
+            width: 400px;
+            height: 90px;
+            background-color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 8px 2px rgba(128, 128, 128, 0.664);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+        }
+    </style>
 </head>
+
 <body>
-   <div class="main-contanier"
-    <p> Area calculator</p>
-    <input type="number" id="input">
-    <br>
-    <button onclick="calculateArea()">Calculate Area</button>
-    <br>
-    <p id="output"></p>
-</div>
-<script>
-    function calculateArea(){
-     //input
-     let radius = document.getElementById("input").value;
-     //assign
-     const pie = 3.142;
-     //process
-     let area = pie * Number(radius)* Number(radius) ;
-     //output
-     document.getElementById("output").innerHTML = "Area of circle is :" + area;
-     
-     }
-</script> 
+    <div class="main-contanier">
+        <h1>
+            <p>Area calculator</p>
+        </h1>
+
+        <div class="circle"></div>
+        <h2>Radius</h2>
+        <input type="number" id="input">
+        <br>
+        <button onclick="calculateArea()">Calculate Area</button>
+        <br>
+        <div class="display-area">
+            <p id="output"></p>
+        </div>
+
+    </div>
+    <script>
+        function calculateArea() {
+            //input
+            let radius = document.getElementById("input").value;
+            //assign
+            const pie = 3.142;
+            //process
+            let area = pie * Number(radius) * Number(radius);
+            //output
+            document.getElementById("output").innerHTML = "Area of circle is :" + area;
+
+        }
+    </script>
 </body>
+
 </html>
