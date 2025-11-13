@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        }
+        
+        .contanier{
+        width: 550px;
+        height: 500px;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 5px 5px 8px 2px gainsboro;
+        }
+
+        .display{
+        width: 500px;
+        height: 70px;
+        background-color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 5px 5px 8px 2px gainsboro;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        }
+        /* .input-box{
+            width: 500px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+        } */
+        b{
+            display: flex;
+            justify-content: flex-start;
+
+        }
+    
+        input {
+        width: 480px;
+        height: 35px;
+        border: 1px solid rgba(179, 175, 175, 0.767);
+        border-radius: 8px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        }
+
+        .button-group{
+        width: 500px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        }
+
+        .btn-1{
+            width: 400px;
+            height: 40px;
+            font-size: 15px;
+            background-color: green;
+            color: white;
+            border-radius: 8px;
+            border: 0 solid;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="contanier">
+        <h1>Math Operations Calculator</h1>
+    <div class="display">
+        <p id="display"></p>
+    </div>
+       <div class="input-box">
+         <lable><b>First Number:</b></lable>
+        <input type="number" id="input-one" placeholder="Enter First Number">
+       </div>
+       
+       <div class="input-box">
+         <lable><b>Second Number:</b></lable>
+        <input type="number" id="input-two"  placeholder="Enter Second Number">
+       </div>
+
+        <div class="button-group">
+        <button class="btn-1" onclick="add()">Add(+)</button>
+        <button class="btn-1" onclick="subtract()">Subtract(-)</button>
+         </div>
+        
+        <div class="button-group">
+        <button class="btn-1" onclick="multiply()">Multiply(x)</button>
+        <button class="btn-1" onclick="divide()">Divide(/)</button>
+         </div>
+    </div>
+<script>
+    function add(){
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        z = Number(x) + Number( y )
+        document.getElementById("display").innerHTML = z ;
+    }
+     function subtract(){
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        z = x - y
+        document.getElementById("display").innerHTML = z ;
+    }
+     function multiply(){
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        z = x * y
+        document.getElementById("display").innerHTML = z ;
+    }
+     function divide(){
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        z = x / y
+        document.getElementById("display").innerHTML = z ;
+    }
+
+</script>
+</body>
+</html>
