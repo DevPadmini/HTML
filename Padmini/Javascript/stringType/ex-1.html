@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h id="display">String Exerice</h>
+    <button onclick="document.getElementById('display').innerHTML='hello';">Click Me</button>
+
+    <input type="text" id="input-1">
+    <input type="text" id="input-2">
+    <button onclick="stringConcat()">Concat</button>
+    <h1 id="result"></h1>
+    <script>
+        let string1 = prompt("Enter a single 1");
+        let  string2 = prompt("Enter a single 2");
+        let c = string1 + string2
+        alert(c);
+
+        function stringConcat(){
+            let str1 = document.getElementById("input-1").value;
+            let str2 = document.getElementById("input-2").value;
+            concatStr = str1+str2
+            document.getElementById("result").innerHTML = concatStr
+
+        }
+    </script>
+</body>
+</html>
