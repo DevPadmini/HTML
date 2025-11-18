@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        font-family: "Changa One", sans-serif;
+        }
+        
+        .contanier{
+        width: 550px;
+        height: 450px;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 8px;
+       border: 1px solid gainsboro;
+        }
+
+        .display{
+        width: 500px;
+        height: 80px;
+        background-color: rgba(211, 211, 211, 0.644);
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contanier">
+        <h1></h1>
+    
+    
+       <div class="input-box">
+         <lable><b>First Number:</b></lable>
+        <input type="number" id="input-one" placeholder="Enter First Number">
+       </div>
+       
+       <div class="input-box">
+         <lable><b>Second Number:</b></lable>
+        <input type="number" id="input-two"  placeholder="Enter Second Number">
+       </div>
+       <button class="btn" onclick="comparison()">Compare Number (frist > second)</button>
+
+
+       <div class="display">
+        <p id="display"></p>
+        <div class="disk">
+            <p id="disk"></p>
+        </div>
+    </div>
+
+       <script>
+        function comparison(){
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        z = x > y
+        document.getElementById("display").innerHTML = z ;
+        document.getElementById("disk").innerHTML = z ;
+    }
+       </script>
+</body>
+</html>
