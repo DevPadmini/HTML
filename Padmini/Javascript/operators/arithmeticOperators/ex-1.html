@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example one on arithmatic operators</title>
+</head>
+<body>
+    <div class="contanier">
+        <h1>Sum and Differece Calculator</h1>
+       <div class="input-box">
+         <lable><b>First Number:</b></lable>
+        <input type="number" id="input-one" placeholder="Enter First Number">
+       </div>
+       
+       <div class="input-box">
+         <lable><b>Second Number:</b></lable>
+        <input type="number" id="input-two"  placeholder="Enter Second Number">
+       </div>
+
+      
+        <button onclick="calculator()">Calculator</button>
+
+        <p> Sum of two number :<b id="sum"></b></p>
+        <p> Differece of two number :<b id="differnce"></b></p>
+
+    <script>
+        function calculator(){
+        //input
+        let num1 = document.getElementById("input-one").value;
+        let num2 = document.getElementById("input-two").value;
+        //Process
+        sum = Number(num1) + Number( num2 );
+        differnce = Number(num1) - Number( num2 )
+        //output
+        document.getElementById("sum").innerHTML = sum ;
+        document.getElementById("differnce").innerHTML = differnce ;
+    }
+    
+    </script>
+</body>
+</html>
