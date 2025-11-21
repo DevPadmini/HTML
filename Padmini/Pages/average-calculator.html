@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>average calculator</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Changa One", sans-serif;
+      }
+
+      .contanier {
+        width: 550px;
+        height: 450px;
+        background-color: white;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        border-radius: 8px;
+        border: 1px solid gainsboro;
+      }
+
+      .display {
+        width: 500px;
+        height: 50px;
+        background-color: rgba(179, 224, 241, 0.274);
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .int-box{
+        width: 500px ;
+        height: 10%;
+      }
+      b {
+        color: red;
+      }
+    
+      input {
+        width: 95%;
+        height: 50%;
+        border: 1px solid rgba(179, 175, 175, 0.767);
+        border-radius: 6px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        width: 500px;
+        height: 40px;
+        font-size: 15px;
+        background-color: rgb(145, 27, 27);
+        color: white;
+        border-radius: 6px;
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contanier">
+      <h1>Average Calculator</h1>
+      <div class="int-box">
+      <lable>First Number:</lable> 
+      <input type="number" id="input-one" placeholder="Enter First Number" />
+      </div><br>
+       <div class="int-box">
+      <lable for="">Second Number:</lable> 
+      <input type="number" id="input-two" placeholder="Enter Second Number" />
+      </div><br>
+      <div class="int-box">
+      <lable for="">Third Number:</lable> 
+      <input type="number" id="input-three" placeholder="Enter Second Number" />
+      </div><br>
+      <button class="btn" onclick="calculate()">Calculate Average</button><br>
+
+      <div class="display">
+        <p id="display">
+          The Average is <b id="num1"></b> , <b id="num2"></b> and
+          <b id="num3"></b> is = <b id="avg"></b>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function calculate() {
+        let num1 = Number(document.getElementById("input-one").value);
+        let num2 = Number(document.getElementById("input-two").value);
+        let num3 = Number(document.getElementById("input-three").value);
+
+        let avg = (num1 + num2 + num3) / 3;
+
+        document.getElementById("num1").innerHTML = num1;
+        document.getElementById("num2").innerHTML = num2;
+        document.getElementById("num3").innerHTML = num3;
+        document.getElementById("avg").innerHTML = avg;
+      }
+    </script>
+  </body>
+</html>
