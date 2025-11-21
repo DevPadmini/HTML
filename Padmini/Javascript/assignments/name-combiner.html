@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Name Combiner</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Changa One", sans-serif;
+      }
+
+      .contanier {
+        width: 550px;
+        height: 500px;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 8px;
+        border: 1px solid gainsboro;
+        gap: 10px;
+        box-shadow: 5px 5px 8px 2px gray;
+      }
+
+      b {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      input {
+        width: 480px;
+        height: 25px;
+        border: 1px solid rgba(179, 175, 175, 0.767);
+        border-radius: 6px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        width: 500px;
+        height: 40px;
+        font-size: 17px;
+        background-color: rgb(62, 161, 241);
+        color: white;
+        border-radius: 6px;
+        border: 0 solid;
+      }
+
+      .display {
+        width: 500px;
+        height: 70px;
+        background-color: rgba(167, 198, 245, 0.26);
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .disk {
+        width: 500px;
+        height: 50px;
+        background-color: black;
+        color: greenyellow;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        text-align: start;
+        display: none;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contanier">
+      <h1>Name Combiner</h1>
+
+      <div class="input-box">
+        <lable><b>Enter First Name :</b></lable>
+        <input type="text" id="input-one" placeholder="Enter First Name" />
+      </div>
+
+      <div class="input-box">
+        <lable><b>Enter Last Name :</b></lable>
+        <input type="text" id="input-two" placeholder="Enter Second Name" />
+      </div>
+      <button class="btn" onclick="combiner()">Combine Name</button><br>
+
+      <div class="display" id="display"></div>
+
+      <code class="disk" id="disk"></code>
+    </div>
+
+    <script>
+      function combiner() {
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        z = x + " " + y;
+        document.getElementById("display").innerHTML = z;
+        document.getElementById("disk").innerHTML = z;
+        document.getElementById("disk").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
