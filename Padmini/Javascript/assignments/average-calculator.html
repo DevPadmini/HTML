@@ -18,10 +18,10 @@
         width: 550px;
         height: 450px;
         background-color: white;
-        text-align: center;
+        
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-direction: column;
         border-radius: 8px;
         border: 1px solid gainsboro;
@@ -39,16 +39,16 @@
         justify-content: center;
       }
       .int-box{
-        text-align: left;
+        width: 500px ;
+        height: 10%;
       }
-
       b {
         color: red;
       }
     
       input {
-        width: 480px;
-        height: 25px;
+        width: 95%;
+        height: 50%;
         border: 1px solid rgba(179, 175, 175, 0.767);
         border-radius: 6px;
         padding: 5px 10px;
@@ -70,17 +70,17 @@
     <div class="contanier">
       <h1>Average Calculator</h1>
       <div class="int-box">
-      <lable>First Number:</lable> </div>
+      <lable>First Number:</lable> 
       <input type="number" id="input-one" placeholder="Enter First Number" />
-      
+      </div>
        <div class="int-box">
-      <lable for="">Second Number:</lable> </div>
+      <lable for="">Second Number:</lable> 
       <input type="number" id="input-two" placeholder="Enter Second Number" />
-      
+      </div>
       <div class="int-box">
-      <lable for="">Third Number:</lable> </div>
+      <lable for="">Third Number:</lable> 
       <input type="number" id="input-three" placeholder="Enter Second Number" />
-      
+      </div>
       <button class="btn" onclick="calculate()">Calculate Average</button><br />
 
       <div class="display">
