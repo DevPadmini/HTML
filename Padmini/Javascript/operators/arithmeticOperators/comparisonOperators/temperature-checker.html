@@ -31,7 +31,7 @@
     .display{
         width: 450px;
         height: 90px;
-        background-color: lightblue;
+        background-color: rgba(173, 216, 230, 0.374);
         text-align: center;
         margin-bottom: 20px;
         border-radius: 8px;
@@ -82,10 +82,12 @@
 
         if (30<= temp){
             document.getElementById("display").innerHTML = "It's Hot!"
+            document.getElementById("display").style.backgroundColor = "#E8D1C5";
             document.getElementById("display").style.color = "red";
         }
         else{
             document.getElementById("display").innerHTML = "It's Cool!"
+            document.getElementById("display").style.backgroundColor = "#AEDEFC";
             document.getElementById("display").style.color = "darkblue";
         }
         document.getElementById("num").value = ";"
