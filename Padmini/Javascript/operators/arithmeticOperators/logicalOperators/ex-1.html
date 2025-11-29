@@ -3,19 +3,119 @@
 
 <head>
     <title>Document</title>
-</head>
+    <style>
+        body {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "Changa One", sans-serif;
+        }
+  
+        .contanier {
+          width: 550px;
+          height: 600px;
+          background-color: white;
+          
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-direction: column;
+          border-radius: 8px;
+          border: 1px solid gainsboro;
+        }
+  
+        .display{
+          width: 500px;
+          height: 5%;
+          background-color: rgba(179, 224, 241, 0.553);
+          text-align: center;
+          margin-bottom: 20px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .int-box{
+          width: 500px ;
+          height: 10%;
+        }
+        b {
+          color: red;
+        }
+      
+        input {
+          width: 95%;
+          height: 30%;
+          border: 1px solid rgba(179, 175, 175, 0.767);
+          border-radius: 6px;
+          padding: 5px 10px;
+          margin-bottom: 20px;
+        }
+  
+        .btn {
+          width: 500px;
+          height: 40px;
+          font-size: 15px;
+          background-color: rgb(81, 222, 243);
+          color: black;
+          border-radius: 6px;
+          border: 0 solid white;
+        }
+        </style>
 
 <body>
-    <script>
-       let Subject1: 85 
-       let Subject2: 90
-       let Subject3: 78 
-       let Subject4: 88 
-       let Subject5: 92 ;
-       let  sum =  Subject1 +  Subject2 +  Subject3 +  Subject4 +  Subject5 
-        totalMarks = 
-       
-    </script>
+    <div class="contanier">
+        <h1>Marks Score</h1>
+        <div class="int-box">
+            <lable>English Marks:</lable>
+            <input type="number" id="input-one" placeholder="Enter Marks" />
+        </div>
+        <div class="int-box">
+            <lable for="">Marathi Marks:</lable>
+            <input type="number" id="input-two" placeholder="Enter Marks" />
+        </div>
+        <div class="int-box">
+            <lable for="">Math Marks:</lable>
+            <input type="number" id="input-three" placeholder="Enter Marks" />
+        </div>
+        <div class="int-box">
+            <lable>Science Marks:</lable>
+            <input type="number" id="input-four" placeholder="Enter Marks" />
+        </div>
+        <div class="int-box">
+            <lable for="five">Genral Science Marks:</lable>
+            <input type="number" id="input-five" placeholder="Enter Marks" />
+        </div><br>
+    
+        <button class="btn" onclick="calculate()">Calculate Result</button><br>
+
+        <div class="display">
+            <p id="display">
+                The Total Marks is <b id="num1"></b> , <b id="num2"></b> and
+                <b id="num3"></b> is = <b id="avg"></b>
+            </p>
+        </div>
+        <div class="display">
+            <p id="display">  The Percentage is <b id="num1"></b>
+            </p>
+        </div>
+        <div class="display">
+            <p id="display">  Result :<b id="num1"></b>
+            </p>
+        </div>
+    </div>
+    <!-- <script>
+        let Subject1: 85
+        let Subject2: 90
+        let Subject3: 78
+        let Subject4: 88
+        let Subject5: 92;
+        let sum = Subject1 + Subject2 + Subject3 + Subject4 + Subject5
+        totalMarks =
+
+    </script> -->
 </body>
 
 </html>
