@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Logical Operator</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Changa One", sans-serif;
+        }
+
+        .contanier {
+            width: 550px;
+            height: 500px;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+            border: 1px solid gainsboro;
+            gap: 10px;
+            box-shadow: 5px 5px 8px 2px gray;
+        }
+
+        input {
+            width: 480px;
+            height: 25px;
+            border: 1px solid rgba(179, 175, 175, 0.767);
+            border-radius: 6px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 500px;
+            height: 40px;
+            font-size: 17px;
+            background-color: rgb(62, 161, 241);
+            color: white;
+            border-radius: 6px;
+            border: 0 solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier">
+        <h1>Welcome Back</h1>
+        <div class="int-box">
+            <lable>Email or Username:</lable>
+            <input type="text" id="input-one" placeholder="Enter Email or Username" />
+        </div>
+
+        <div class="int-box">
+            <lable>Password:</lable>
+            <input type="number" id="input-one" placeholder="Enter password" />
+        </div>
+        <button class="btn" onclick="login()">Login</button><br>
+
+    </div>
+    <script>
+        let userName = "UserName02";
+        let email = "example@gmail.com";
+        let password = 1234;
+
+        function login() {
+            let userName = document.getElementById("input-one").value
+            let password = document.getElementById("input-one").value
+
+            
+            if ((userName == "UserName02" || userName == "example@gmail.com") && password == "password"){
+                alert("Login Succesful")
+            }
+            else {
+                alert("login Fail")
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
