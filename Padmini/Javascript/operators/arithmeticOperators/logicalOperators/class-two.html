@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Changa One", sans-serif;
+        }
+
+        .contanier {
+            width: 550px;
+            height: 500px;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+            border: 1px solid gainsboro;
+            gap: 10px;
+            box-shadow: 5px 5px 8px 2px gray;
+        }
+
+        .one {
+            height: 100px;
+            width: 400px;
+            background-color: rgba(144, 238, 144, 0.605);
+            font-size: 13px;
+            border-radius: 10px;
+        }
+
+        b {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        input {
+            width: 480px;
+            height: 25px;
+            border: 1px solid rgba(179, 175, 175, 0.767);
+            border-radius: 6px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 500px;
+            height: 40px;
+            font-size: 17px;
+            background-color: green;
+            color: white;
+            border-radius: 6px;
+            border: 0 solid;
+        }
+    </style> 
+</head>
+
+<body>
+    <div class="contanier">
+        <h1>Roller Coster Ride Checker</h1>
+        <div class="one">
+            <h3>Requirement to ride</h3>
+            <p>At least 12 year old</p>
+            <p>At least 140cm above height</p></div>
+            <div class="int-box">
+                <lable><b>Your Age(year):</b></lable>
+                <input type="text" id="input-one" />
+            </div>
+    
+            <div class="int-box">
+                <lable><b>Your Height(cm):</b></lable>
+                <input type="number" id="input-one" />
+            </div>
+            <button class="btn" onclick="login()">Checker Eigibility</button><br>
+        
+
+    <div></div>
+    <!-- <script>
+        const minAge = 12;
+        const minHeight = 140;
+
+        let age = Number(prompt("Enter your Age : "))
+        let height = Number(prompt("Enter your height is an cm : "))
+
+        if ((age >= minAge) && (height >= minHeigth)) {
+            console.log("Eigible to ride")
+        }
+
+        else {
+            console.log("Not Eigible to ride")
+        }
+    </script> -->
+</body>
+
+</html>

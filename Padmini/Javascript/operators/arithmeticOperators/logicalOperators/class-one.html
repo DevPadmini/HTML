@@ -28,6 +28,11 @@
             box-shadow: 5px 5px 8px 2px gray;
         }
 
+        b {
+            display: flex;
+            justify-content: flex-start;
+        }
+
         input {
             width: 480px;
             height: 25px;
@@ -53,13 +58,13 @@
     <div class="contanier">
         <h1>Welcome Back</h1>
         <div class="int-box">
-            <lable>Email or Username:</lable>
+            <lable><b>Email or Username:</b></lable>
             <input type="text" id="input-one" placeholder="Enter Email or Username" />
         </div>
 
         <div class="int-box">
-            <lable>Password:</lable>
-            <input type="number" id="input-one" placeholder="Enter password" />
+            <lable><b>Password:</b></lable>
+            <input type="number" id="input-two" placeholder="Enter password" />
         </div>
         <button class="btn" onclick="login()">Login</button><br>
 
@@ -70,15 +75,15 @@
         let password = 1234;
 
         function login() {
-            let userName = document.getElementById("input-one").value
-            let password = document.getElementById("input-one").value
+            let userNameInput = document.getElementById("input-one").value
+            let passwordInput = Number(document.getElementById("input-two").value)
 
-            
-            if ((userName == "UserName02" || userName == "example@gmail.com") && password == "password"){
-                alert("Login Succesful")
+
+            if ((userNameInput == "userName" || userNameInput == "email") && passwordInput == "password") {
+                console.log("Login Succesful")
             }
             else {
-                alert("login Fail")
+                console.log("login Fail")
             }
         }
 
