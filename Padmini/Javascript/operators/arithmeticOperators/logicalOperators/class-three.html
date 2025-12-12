@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>logical Operator example 3</title>
+    <style>
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(242, 245, 246) ;
+        font-family: "Open Sans", sans-serif;
+    }
+    
+    .main-contanier{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(186, 230, 229, 0.864) ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container{
+        width: 250px;
+        height: 280px;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid ghostwhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+    }       
+
+    h2 {
+      margin-bottom: 20px;
+      
+    }
+
+    input {
+        width: 220px;
+        height: 35px;
+        border: 1px solid rgb(179, 175, 175);
+        border-radius: 8px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-contanier">
+    <h2>Enter number :</h2>
+    <input type="number" id="num">
+    <br>
+    <br>
+    <input type="checkbox" id="checkbox">
+    <label>is a member</label>
+    <br>
+    <br>
+    <button onclick="checkbox()">submit</button>
+</div>
+    <script>
+        function checkbox() {
+            let value = document.getElementById("checkbox").checked;
+            let cartValue = document.getElementById("num").value;
+            // alert(value);
+            if (cartvalue >= 100 && value){
+                alert("Discount Applied")
+            }
+            else{
+                alert("Discount is not applied")
+            }
+        }
+    </script>
+</body>
+
+</html>
