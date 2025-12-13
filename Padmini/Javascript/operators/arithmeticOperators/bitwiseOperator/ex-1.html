@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bitwise Operator example no 1</title>
+    <style>
+         body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        background-color: bisque;
+        }
+        
+        .contanier{
+        width: 500px;
+        height: 400px;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 5px 5px 8px 2px gainsboro;
+        }
+        b{
+            display: flex;
+            justify-content: flex-start;
+
+        }
+    
+        input {
+        width: 400px;
+        height: 35px;
+        border: 1px solid rgba(179, 175, 175, 0.767);
+        border-radius: 8px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        }
+
+        .button{
+        width: 350px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        }
+        .display{
+        width: 400px;
+        height: 70px;
+        background-color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 5px 5px 8px 2px gainsboro;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contanier">
+        <h1>Even Number Checker</h1>
+        <label><b>Enter a Number :</b></label>
+        <input type="number">
+        <button class="button" onclick="checker()">Check Even/Odd</button>
+        <div class="display"></div>
+        
+    </div>
+    <script>
+        let num = prompt("Enter a Number :")
+
+        if((num & 1)== 0)
+        alert(num + " is Even ("+ num + " & 1 == 0)")
+    else(
+        alert(num + " is Odd ("+ num + " & 1 == 1)")
+    )
+    </script>
+</body>
+</html>
