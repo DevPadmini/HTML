@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Student Marks Grade</title>
+   <style>
+    .one{
+        height: 300px;
+        width: 300px;
+        background-color: antiquewhite;
+        display: none;
+    }
+    .two{
+        height: 300px;
+        width: 300px;
+        background-color: antiquewhite;
+        display: none;
+    }
+   </style>
+</head>
+<body>
+    <input type="radio" name ="class" value="class" id="10-class"><label>10th class</label>
+    <input type="radio" name ="class" value="class" id="12-class"><label>12th class</label>  
+    <button onclick="getValue()">Submit</button>
+    <div class="one" id="b-1">
+        <h1>10th class</h1>
+    </div>
+    <div class="two" id="b-2">
+        <h1>12th class</h1>
+    </div>
+    <script>
+        function getValue(){
+            grade =""
+            if(document.getElementById("10-class").checked){
+                grade = "10th class"
+            }
+            else if(document.getElementById("12-class").checked){
+                 grade = "12th class"
+            }
+            else{
+                grade ="No Option Selected"
+            }
+            if (grade = "10 class"){
+                document.getElementById("b-1").style.display = "block"
+            }
+            else{
+                document.getElementById("b-2").style.display = "block"
+            }
+        }
+        function grade(){
+           let marks = prompt("Enter your Marks :")
+        }
+        if(marks >= 90){
+            alert("A Grade")
+        }
+        else if(marks >=75){
+            alert("B Grade")
+        }
+        else if(marks >=50){
+            alert("C Grade")
+        }
+        else if(marks >=35){
+            alert("D Grade")
+        }
+        else {
+            alert("Fail")
+        }
+    </script>
+</body>
+</html>
