@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill units Document</title>
+</head>
+
+<body>
+    <script>
+        let unit = prompt("Enter your Unit :")//48
+        total = 0
+        bill = 0
+
+        if (unit <= 50) {
+            bill = unit * 7//48 x 7 = 336
+        }
+        else if (unit <= 150) {
+            bill = unit * 8
+        }
+        else if (unit <= 250) {
+            bill = unit * 12
+        }
+        else if (unit <= 251) {
+            bill = unit * 15
+        }
+  
+        percent = 0.20 * bill//336 x 0.20 = 67.2
+
+        total = bill + percent// 336 + 67.2
+        alert(total)//403.2
+
+    </script>
+</body>
+
+</html>
