@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Switch casedate good morning cheker</title>
+</head>
+
+<body>
+    <script>
+        let hour = prompt()
+
+        switch (true) {
+            case ((hour >= 5 )&&(hour < 11)):
+                alert("Good morning");
+                break;
+
+            case (( hour >= 12) && (hour < 17)):
+                alert("Good Afternoon");
+                break;
+
+            case ((hour >=18) && (hour < 21)):
+                alert("Good Evening");
+                break;
+
+            case (hour > 21 && hour <= 24) || (hour >= 0 && hour <= 4):
+            alert("Good Night");
+                break;
+            default:
+                alert("Please Enter vaild no.")
+        }
+
+    </script>
+</body>
+
+</html>
