@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza Menu System</title>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Pizza Menu</h2>
+        <button onclick=smallPizza()>Small Pizza 150</button>
+        <button onclick=mediumPizza()>Medium Pizza 250</button>
+        <button onclick=largePizza()>Large Pizza 350</button>
+        <p id="display"></p>
+    </div>
+
+    <script>
+        let pizzaPrice = 0;
+        let select = "";
+        function getPizza() {
+            switch (pizzaPrice) {
+                case (150):
+                    select = "You select small pizza"
+                    break;
+
+                case (250):
+                    select = "You select medium pizza"
+                    break;
+
+                case (350):
+                    select = "You select large pizza"
+                    break;
+            }
+            document.getElementById("display").innerHTML = select
+        }
+        function smallPizza() {
+            pizzaPrice = 150
+            getPizza();
+        }
+        function mediumPizza() {
+            pizzaPrice = 250
+            getPizza();
+        } function largePizza() {
+            pizzaPrice = 350
+            getPizza();
+        }
+
+    </script>
+</body>
+
+</html>

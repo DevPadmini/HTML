@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Movie ticket Pricing</title>
+</head>
+
+<body>
+    <script>
+        let age = prompt("Enter your Age :")
+
+        switch (true) {
+            case ((age >= 1) && (age <= 12)):
+                alert("Ticket Price 100 Child");
+                break;
+
+            case ((age >= 13) && (age <= 19)):
+                alert("Ticket Price 150 Teen");
+                break;
+
+            case ((age >= 20) && (age <= 59)):
+                alert("Ticket Price 200 Adult ");
+                break;
+
+            case (age >= 60):
+                alert("Ticket Price 120 Senior");
+                break;
+            default:
+                alert("")
+        }
+
+
+    </script>
+</body>
+
+</html>
