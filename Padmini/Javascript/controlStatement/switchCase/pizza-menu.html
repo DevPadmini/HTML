@@ -3,15 +3,43 @@
 
 <head>
     <title>Pizza Menu System</title>
+    <style>
+        .main-contanier {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .box {
+            width: 40%;
+            height: 30%;
+            background-color: antiquewhite;
+        }
+        /* .btn{
+            width: 80%;
+            height: 20%;
+            background-color: aquamarine;
+        } */
+    </style>
 </head>
 
 <body>
-    <div class="box">
-        <h2>Pizza Menu</h2>
-        <button onclick=smallPizza()>Small Pizza 150</button>
-        <button onclick=mediumPizza()>Medium Pizza 250</button>
-        <button onclick=largePizza()>Large Pizza 350</button>
-        <p id="display"></p>
+    <div class="main-container">
+        <div class="box">
+            <h2>Pizza Menu</h2>
+            <div class="btn"></div>
+            <button onclick=smallPizza()>Small Pizza 150</button>
+          
+            <button onclick=mediumPizza()>Medium Pizza 250</button>
+            
+            <button onclick=largePizza()>Large Pizza 350</button>
+           
+    </div>
+            <p id="display"></p>
+            <br>
+        </div>
     </div>
 
     <script>
