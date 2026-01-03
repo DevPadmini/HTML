@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Pizza Menu System</title>
     <style>
@@ -9,12 +8,12 @@
             height: 100vh;
         }
 
-        .main-contanier {
+        .main-container {
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
-            justify-content: center
+            justify-content: center;
         }
 
         .box {
@@ -35,7 +34,7 @@
             padding: 10px;
         }
 
-        button:hover {
+        .button:hover {
             background-color: #e7ad94;
         }
 
@@ -50,13 +49,13 @@
 </head>
 
 <body>
-    <div class="main-contanier">
+    <div class="main-container">
         <div class="box">
             <h2>Pizza Menu</h2>
 
-            <button onclick=smallPizza()>Small Pizza 150</button>
-            <button onclick=mediumPizza()>Medium Pizza 250</button>
-            <button onclick=largePizza()>Large Pizza 350</button>
+            <button class="button" onclick="smallPizza()">Small Pizza 150</button>
+            <button class="button" onclick="mediumPizza()">Medium Pizza 250</button>
+            <button class="button" onclick="largePizza()">Large Pizza 350</button>
 
             <div class="display">
                 <p id="display"></p>
@@ -70,37 +69,33 @@
 
         function getPizza() {
             switch (pizzaPrice) {
-                case (150):
-                    select = "You select Small Pizza!"
+                case 150:
+                    select = "You selected Small Pizza!";
                     break;
-
-                case (250):
-                    select = "You select Medium Pizza!"
+                case 250:
+                    select = "You selected Medium Pizza!";
                     break;
-
-                case (350):
-                    select = "You select Large Pizza!"
+                case 350:
+                    select = "You selected Large Pizza!";
                     break;
             }
-            document.getElementById("display").innerHTML = select
+            document.getElementById("display").innerHTML = select;
         }
+
         function smallPizza() {
             pizzaPrice = 150;
             getPizza();
         }
 
-
         function mediumPizza() {
             pizzaPrice = 250;
             getPizza();
-        } 
-        
+        }
+
         function largePizza() {
             pizzaPrice = 350;
             getPizza();
         }
-
     </script>
 </body>
-
 </html>
