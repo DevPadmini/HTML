@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online & Offline</title>
+<style>
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .container {
+        width: 30%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 2px rgb(185, 183, 183);
+      }
+      img {
+        border-radius: 100%;
+      }
+      .btn {
+        width: 100%;
+        height: 7%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      button {
+        width: 40%;
+        height: 100%;
+        border: 0 solid;
+        border-radius: 5%;
+
+      }
+      .box{
+        width: 65%;
+        height: 40%;
+        background-color: rgb(231, 229, 229);
+          border-radius: 5%;
+        
+      }
+      .Details{
+         width: 60%;
+        height: 20%;
+        background-color: rgb(231, 229, 229);
+      padding-left: 5%;
+      border-radius: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container" id="main">
+      <div class="container" id="container">
+        <h1>Connection Status</h1>
+        <p>Toggle between online and offline modes to see the visual changes</p>
+        <div class="box">
+        <img
+          src="https://icones.pro/wp-content/uploads/2022/06/icone-du-bouton-en-ligne-vert.png"
+          width="60%"
+          height="60%"
+          id="imgon"
+        />
+        <img
+          src="https://www.pngitem.com/pimgs/m/81-810617_icon-heart-red-love-frame-photo-frame-red.png"
+          width="50%"
+          height="50%"
+          id="imgoff"
+          style="display: none"
+        />
+        <h2 id="line">Online</h2>
+        <h3 id="3rdheading">Connected to the internet</h3>
+        </div>
+        <br>
+        <div class="btn">
+          <button id="button" onclick="changeStatus()"></button></div><br>
+          <div class="Details">
+          <h3>Current Status Details</h3>
+          <p id="sentence1">Active internet connection</p>
+          <p id="sentence2">Real-time update available</p>
+          <p id="sentence3">Cloud synd enabled</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let bgColor = "white";
+      let bgContainer = "white";
+      let textColor = "black";
+      let buttonText = "<b>Switch to Offline</b>";
+
+      document.getElementById("main").style.backgroundColor = bgContainer;
+      document.getElementById("container").style.backgroundColor = bgColor;
+      document.getElementById("button").innerHTML = buttonText;
+
+      function changeTheme() {
+        if(x==0){
+          let x=1
+        document.getElementById("container").style.backgroundColor = bgColor;
+        document.getElementById("container").style.color = textColor;
+        document.getElementById("main").style.backgroundColor = bgContainer;
+        document.getElementById("button").innerHTML = buttonText;
+        document.getElementById("button").style.backgroundColor ="blue"
+        document.getAnimations("display").i;
+        document.getElementById("line").style.color = "green"
+        document.getElementById("3headling").style.color = "green"
+        }
+        else{
+          let x =0
+          document.getElementById("container").style.backgroundColor = bgColor;
+        document.getElementById("container").style.color = textColor;
+        document.getElementById("main").style.backgroundColor = bgContainer;
+        document.getElementById("button").innerHTML = buttonText;
+        document.getElementById("button").style.backgroundColor ="blue"
+        document.getAnimations("display").i;
+        document.getElementById("line").style.color = "red"
+        document.getElementById("3headling").style.color = "red"
+        }
+      }
+    </script>
+    
+</body>
+</html>
