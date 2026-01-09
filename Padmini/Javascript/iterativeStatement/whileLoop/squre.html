@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wholeSqure</title>
+</head>
+
+<body>
+    <pre id = "demo"></pre>
+    <script>
+        let i = 1
+        let n = 7
+        while (i <= n) {
+            let j = 1
+            let row =" "
+            while(j <= n){
+            if (i == 1 || i == 7 || j == 1 || j == 7) {
+                row += " + "
+            } 
+            else {
+                row += "   ";
+            }
+            j++
+        }
+        console.log(row)
+        console.log("")
+        document.getElementById("demo").innerHTML += row + "<br/>"
+        i++
+        }
+
+    </script>
+</body>
+
+</html>
