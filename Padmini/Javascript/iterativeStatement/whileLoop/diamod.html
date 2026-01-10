@@ -13,6 +13,12 @@
       while (i <= n) {
         let j = 1;
         let row = "";
+        if (i == 1 || i == j || i== n|| j == 1 ){
+                row += " + "
+            } 
+            else {
+                row += "   ";
+            }
 
         while (j <= n - i) {
           row += " ";
@@ -48,4 +54,4 @@
       }
     </script>
   </body>
-</html>
+</html> 
