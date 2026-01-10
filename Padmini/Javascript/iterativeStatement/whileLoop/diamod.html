@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diamond in while loop</title>
+  </head>
+  <body>
+    <script>
+      let i = 1;
+      let n = 7;
+
+      while (i <= n) {
+        let j = 1;
+        let row = "";
+
+        while (j <= n - i) {
+          row += " ";
+          j++;
+        }
+        let star = 1;
+        while (star <= 2 * i - 1) {
+          row += "*";
+          star++;
+        }
+        console.log(row);
+        i++;
+      }
+
+      let p = 7;
+      let q = p - 1;
+
+      while (q >= 1) {
+        let r = 1;
+        let row = "";
+
+        while (r <= p - q) {
+          row += " ";
+          r++;
+        }
+        let star = 1;
+        while (star <= 2 * q - 1) {
+          row += "*";
+          star++;
+        }
+        console.log(row);
+        q--;
+      }
+    </script>
+  </body>
+</html>
