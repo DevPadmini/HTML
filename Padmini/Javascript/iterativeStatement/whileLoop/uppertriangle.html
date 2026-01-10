@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper triangle</title>
+</head>
+
+<body>
+   <pre id="demo"></pre> 
+    <script>
+        let i = 1;
+        let n = 7;
+
+        while (i <= n) {
+            let j = 1;
+            let row = "";
+
+            while (j <= n - i) {
+                row += " ";
+                j++;
+            }
+            let star = 1;
+            while (star <= i) {
+                row += " *";
+                star++;
+            }
+            console.log(row);
+            document.getElementById("demo").innerHTML += row + "</br>"
+            i++;
+        }
+    </script>
+</body>
+
+</html>
