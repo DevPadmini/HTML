@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt("1.Add\n 2.Sub\n 3.div\n 4.multi\n 5.exited\n ")
+    // do while{
+        if ("add" == input) {
+            let n1 = prompt("Enter first no.")
+            let n2 = prompt("Enter second no.")
+            let sum = Number(n1) + Number(1)
+            alert("The sum of given number:"+ sum)
+        }
+        else if ("sub" == input) {
+            let n1 = prompt("Enter first no.")
+            let n2 = prompt("Enter second no.")
+            let diff = Number(n1) - Number(n2)
+            alert("The diff of given number:"+diff)
+        }
+        else if ("div" == input) {
+            let n1 = prompt("Enter first no.")
+            let n2 = prompt("Enter second no.")
+            let div = Number(n1) % Number(n2)
+            alert("The div of given number:"+div)
+        }
+         else if ("multiply" == input) {
+            let n1 = prompt("Enter first no.")
+            let n2 = prompt("Enter second no.")
+            let multi = Number(n1) * Number(n2)
+            alert("The product of given number:"+multi)
+        }
+        else if ("exit" == input) {
+            alert("operation is end")
+            // break;
+
+        }
+        else {
+            alert("Invaild operation")
+        }
+    // }
+    //     while(true)
+    
+    </script>
+</body>
+
+</html>
