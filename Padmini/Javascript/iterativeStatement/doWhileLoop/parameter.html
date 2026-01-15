@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="p()">click me</button>
+    <script>
+        function p(){
+            let n1 = prompt("enter frist no:")
+            let n2 = prompt("enter second no:")
+            //argument
+            addno(n2,n1)
+        }
+        //parameter
+        function addno(a,b){
+             printString(a,b)
+
+            let sum = Number(a)+ Number(b)
+            console.log(sum)
+
+            let diff = Number(a)- Number(b)
+            console.log(diff)
+        }
+        function printString(a,b){
+            console.log("a is :"+a)
+            console.log("b is :"+b)
+        }
+    </script>
+</body>
+</html>
