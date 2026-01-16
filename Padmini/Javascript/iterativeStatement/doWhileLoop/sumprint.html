@@ -22,29 +22,60 @@
         //     i++; 
         // }while(i< 5);
 
-        let i = 1;
-        let n = 2;
-        let sum = 0
+        // let i = 1;
+        // let n = 2;
+        // let sum = 0
 
-        while (i <= n) {
-            let input = Number(prompt());
-            sum = input + n
-            if (0 < i) {
-                console.log(sum);
-                sum++
-            }
-            else if (0 < i) {
-                console.log(sum);
-                sum++
-            }
-            else {
-                console.log("is negative")
-            }
-            i++
+        // while (i <= n) {
+        //     let input = Number(prompt());
+        //     sum = input + n
+        //     if (0 < i) {
+        //         console.log(sum);
+        //         sum++
+        //     }
+        //     else if (0 < i) {
+        //         console.log(sum);
+        //         sum++
+        //     }
+        //     else {
+        //         console.log("is negative")
+        //     }
+        //     i++
+        // }
+
+      
+    // let sum = 0;
+    // let num;
+
+    // while (true) {
+    //     num = prompt("Enter a number (negative to stop):");
+
+    //     if (num < 0) {
+    //         break; // stop when negative number is entered
+    //     }
+
+    //     sum += num;
+    // }
+
+    // console.log("Sum =", sum);
+
+    let sum = 0;
+    let num;
+
+    while (true) {
+        num = Number(prompt("Enter a number (negative to stop):"));
+
+        if (num >= 0) {
+            // if number is positive or zero, add to sum
+            sum += num;
+        } else {
+            // if number is negative, stop the loop
+            break;
         }
+    }
 
-
-    </script>
+    console.log("Sum =", sum);
+</script>
 </body>
 
 </html>
