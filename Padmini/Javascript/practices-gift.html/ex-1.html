@@ -8,7 +8,9 @@
 </head>
 
 <body>
+    <p id="demo"></p>
     <script>
+
         // let i = 1
         // let n = 10
 
@@ -108,7 +110,7 @@
         //     }
         //     console.log(row)
         //     i++
-        //    } 
+        //    }
 
         //question 8
         //     Print the following pattern:
@@ -141,7 +143,7 @@
         // ****
         // ***
         // **
-        // * 
+        // *
         // let i = 1
         // let n = 5
         // while (i <= n) {
@@ -198,7 +200,7 @@
         //     console.log(a);
         //     i++
         // }
-        // ---------------------------------------------------------------------------------------------------
+
         //question 13
         // Write a program to check whether a number is prime.
         // let i = 1;
@@ -220,13 +222,19 @@
 
         //question 13
         //  Write a program to print the Fibonacci series up to N terms.
-        // let i = 0;
-        // let n = 50;
-        // let sum = 1;
-        // while (i <= n) {
-        //     sum = sum + i
-        //     console.log(sum);
-        //     i++
+        // let a = 0
+        // let b =1
+        // let n = 10
+        // let next ;
+        // let i = 0
+        // console.log(a)
+        // console.log(b)
+        // while(i <= n){
+        //     next = a + b
+        //     console.log(next)
+        //     a = b ;
+        //      b = next;
+        //      i++
         // }
 
         //question 14
@@ -242,8 +250,106 @@
         //     i++
         // }
 
-        
-        
+        //question 15
+        // Write a program to find the largest of three numbers.
+        // let a = Number(prompt())
+        // let b = Number(prompt())
+        // let c = Number(prompt())
+        // let i = 0;
+        // let n = 1;
+        // while(i <= n){
+        //     if(a > b){
+        //         console.log(a)
+        //     }
+        //     else if(c > b){
+        //         console.log(c)
+        //     }
+        //     else{
+        //         console.log(b)
+        //     }
+        //     i++
+        // }
+
+        //question 16
+        // Write a program to check whether a person is a child, teenager, or adult based on age.
+        // let a = Number(prompt())
+        // let i = 0;
+        // let n = 1;
+        // while (i <= n) {
+        //     if (a <= 20) {
+        //         alert("adult")
+        //     }
+        //     else if (a <= 19) {
+        //         alert("teenager")
+        //     }
+        //     else if (a <= 12) {
+        //         alert("child")
+        //     }
+        //     else {
+        //         alert("Check Child,teenager or adult")
+        //     }
+        //     i++
+        // }
+
+        //question 17
+        // Write a program to check whether a character is a vowel or consonant.
+        // let i = 1
+        // let n = 0
+        // while (i <= n) {
+        // let vowel = prompt()
+        // if (vowel == "a" || vowel == "e" || vowel == "i" || vowel == "o" || vowel == "u") {
+        //     alert(vowel + " is vowel")
+        // }
+        // else {
+        //     alert(vowel + " is consonant")
+        // }
+        //     i++
+        // }
+
+        //question 18
+        // Write a program to check whether a number is zero, positive, or negative.
+        // let i = 0
+        // let n = 1
+        // let num = Number(prompt())
+        // let a = 0;
+        // while(i <= n){
+        //     if(0 < num){
+        //         alert("postive")
+        //     }
+        //     else if(0 > num){
+        //         alert("negative")
+        //     }
+        //     else if(0 == num) {
+        //         alert("zero")
+        //     }else{
+        //         alert("Enter a number")
+        //     }
+        //     i++
+        // }
+
+
+        //question 19
+        // Check whether a number is an Armstrong number.
+        let i = 0
+        let n = 3
+        let sum = 0
+        while (i <= n) {
+            let a = Number(prompt())
+            if (a > 0) {
+                sum = sum + a;
+            }
+            else if (a >= 0)
+                sum = sum + a;
+            else {
+                alert("Enter a number")
+            }
+            console.log("")
+            i++
+        }
+        console.log(sum);
+       
+
+        // document.getElementById("demo").innerHTML = a;
     </script>
 </body>
 
