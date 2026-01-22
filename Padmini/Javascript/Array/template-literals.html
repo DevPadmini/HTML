@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //Template literals
+      let specialString = "This is a template literal";
+      console.log(typeof specialString);
+
+      //Variable Interpolation
+      let name = "Padmini";
+      let msg = `Hello, ${name}!`;
+      console.log(msg);
+
+      //Multi-line Strings
+      let text = 
+      `Line 1 : how are you?
+      Line 2 : i am fine.
+      Line 3 : you
+      Line 4 : i am as fine.`;
+      console.log(text);
+
+      //Expressions Inside
+        let a =Number(prompt("Enter 1st no. :")),
+        b = Number(prompt("Enter 2st no. :"))
+        console.log(`Sum = ${a + b}`); 
+        console.log(`Diff = ${a - b}`);
+        console.log(`Multiply = ${a * b}`);
+        console.log(`Div = ${a / b}`);  // ${ } = JavaScript code inside a string//
+    </script>
+</body>
+</html>

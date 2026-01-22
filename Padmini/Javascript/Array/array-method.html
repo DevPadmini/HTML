@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>commen array methods</title>
+  </head>
+  <body>
+    <script>
+      let fruits = ["Apple", "Banana", "Mango"];
+
+      // includes() — array me value hai ya nahi
+      console.log(fruits.includes("Apple"));
+
+      // indexOf() — value ka index number batata hai
+      console.log(fruits.indexOf("Mango"));
+
+      // join() — array ko string me convert karta hai
+      console.log(fruits.join(", "));
+
+      //   Advanced Methods
+
+      // map() — har element par kaam karke NEW array banata hai
+      let nums = [1, 2, 3];
+      let square = nums.map((n) => n * n);
+      console.log(square);
+
+      //   filter() — condition ke basis par value select karta hai
+      let number = [1, 2, 3, 4];
+      let even = (nums = number.filter((n) => n % 2 === 0));
+      console.log(even);
+
+      //   reduce() — sab values ko mila kar ek value banata hai
+      let numbers = [1, 2, 3];
+      let sum = numbers.reduce((total, n) => total + n, 0);
+      console.log(sum);
+    </script>
+  </body>
+</html>
