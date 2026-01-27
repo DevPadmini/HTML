@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+let count = 1;
+function printStar() {
+    if (count <= 5) {
+        console.log("*"+" ");
+        count++;
+        printStar(); // call only when condition is true
+    }
+}
+// start the function
+printStar();
+let reverseStr="";
+let string="EVERYTHINGS"
+let a=string.length;
+function reverseString(){
+    if(a >=0){
+        reverseStr +=string.charAt(a)
+        a--;
+        reverseString()
+    }
+}
+reverseString()
+console.log(reverseStr)
+</script>
+</body>
+</html> 
