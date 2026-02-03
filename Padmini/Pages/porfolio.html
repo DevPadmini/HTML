@@ -103,15 +103,15 @@
         .quick-btn:hover {
             border-color: rgba(0, 167, 167, 0.507);
             transition-duration: 0.2s;
-            box-shadow: 5px 5px 50px 10px rgba(111, 0, 255, 0.199);
+            box-shadow: 5px 5px 50px 10px rgba(165, 42, 42, 0.092);
             background-color: rgba(0, 0, 0, 0.342);
         }
 
         /* about  */
         .about {
             width: 100%;
-            height: 700px;
-            background-color: antiquewhite;
+            height: 800px;
+            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -181,10 +181,10 @@
             width: 100%;
             height: 92%;
             background-color: rgb(255, 255, 255);
-            display: grid;  
+            display: grid;
             justify-items: center;
             align-items: center;
-            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
 
         }
@@ -203,7 +203,7 @@
             /* text-align: center;
     align-content: center; */
             font-size: 150%;
-            border-radius: 10px;
+            border-radius: 3    0px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -236,7 +236,7 @@
         .project {
             width: 100%;
             height: 400px;
-            background-color: white;            
+            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -271,6 +271,43 @@
             background-color: rgba(0, 0, 0, 0.144);
             color: black;
         }
+        .btn:hover {
+            border-color: rgba(149, 28, 64, 0.507);
+            transition-duration: 0.2s;
+            box-shadow: 5px 5px 50px 10px rgba(165, 42, 42, 0.092) ;
+            background-color: white;
+        }
+
+        /* .products  */
+        .container {
+            width: 100%;
+            height: 800px;
+            background: linear-gradient(white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 45px;
+        }
+
+        .products {
+            height: auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 50px;
+        }
+        .product-card {
+        width: 100%;
+        height: 300px;
+        border-radius: 30px;
+        background-color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid rgb(80, 80, 80);
+      }
     </style>
 </head>
 
@@ -302,6 +339,7 @@
 
     <!-- about -->
     <section class="about">
+        <h1 class="title">About</h1>
         <div class="first-box">
             <div class="photo">
             </div>
@@ -375,6 +413,22 @@
                 <button class="btn">Live Project</button>
             </div>
         </section>
+
+        <!-- container -->
+        <div class="container">
+            <div class="products">
+                <div class="product-card"></div>
+                <div class="product-card"></div>
+                <div class="product-card"></div>
+                <div class="product-card"></div>
+                <div class="product-card"></div>
+                <div class="product-card"></div>
+            </div>
+
+        </div>
+
+
+
 </body>
 
 </html>
