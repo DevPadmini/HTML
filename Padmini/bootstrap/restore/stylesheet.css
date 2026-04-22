@@ -1,0 +1,31 @@
+.cover-container{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    background-image: url("https://media.timeout.com/images/106196295/image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.cover-inner{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(215, 250, 238, 0.504);
+    color: black;
+    border-radius: 20px;
+
+}
+.card-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
