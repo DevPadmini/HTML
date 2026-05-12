@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- BOOTSRAP LINK -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- SCRIPT LINK  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .height-22 {
+      height: 200px;
+    } 
+    .height-1 {
+      height: 400px;
+    }
+    /* .height-3 {
+      height: 4 50px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    } */
+  </style>
+  <body>
+    <div
+      class="row my-5"
+      style="display: center; align-items: center; justify-content: center"
+    >
+      <!-- TOP -->
+      <div class="col-4 border height-3 display f-w" id="display">
+        <div class="col-12 border height-1">
+          <div class="col-12 border height-22"></div>
+          <button
+            class="btn bg-primary text-white m-2"
+            style="display: flex; align-items: center; justify-content: center"
+            onclick="addStudent()"
+          >
+            ADD student
+          </button>
+          <button
+            class="btn bg-secondary text-white m-2"
+            style="display: flex; align-items: center; justify-content: center"
+            onclick="removeStudent()"
+          >
+            remove student
+          </button>
+          <button
+            class="btn bg-primary text-white m-2"
+            style="display: flex; align-items: center; justify-content: center"
+            onclick="frontunshift()"
+          >
+            unshift
+          </button>
+          <button
+            class="btn bg-secondary text-white m-2"
+            style="display: flex; align-items: center; justify-content: center"
+            onclick="frontshift()"
+          >
+            shift
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let students = ["Ram", "shyam", "jay"];
+      let display = students;
+      document.getElementById("display").innerHTML = display;
+
+      function addStudent() {
+        let student = prompt();
+        students.push(student);
+        document.getElementById("display").innerHTML = display;
+      }
+      function removeStudent() {
+        students.pop();
+        document.getElementById("display").innerHTML = display;
+      }
+      function frontunshift() {
+        let student = prompt();
+        students.unshift(student);
+        document.getElementById("display").innerHTML = display;
+      }
+      function frontshift() {
+        students.shift();
+        document.getElementById("display").innerHTML = display;
+      }
+    </script>
+  </body>
+</html>

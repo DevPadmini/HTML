@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Manager</title>
+  <!-- Fixed Bootstrap 5.3.3 Links -->
+  <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body>
+  <!-- SUGGESTION: Use .container to center everything properly -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 border p-4 shadow-sm text-center">
+        
+        <!-- DISPLAY AREA: Separated so buttons don't disappear -->
+        <h4 class="mb-3">Student List:</h4>
+        <div id="studentDisplay" class="p-3 mb-4 bg-light border rounded" style="min-height: 50px; font-size: 1.2rem;">
+          <!-- Names will appear here -->
+        </div>
+
+        <!-- BUTTONS AREA -->
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <button class="btn btn-primary" onclick="addStudent()">Add Student</button>
+          <button class="btn btn-secondary" onclick="removeStudent()">Remove Student</button>
+          <button class="btn btn-success" onclick="frontunshift()">Unshift</button>
+          <button class="btn btn-warning" onclick="frontshift()">Shift</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let students = ["Ram", "shyam", "jay"];
+
+    // Update function to refresh the text without deleting buttons
+    function updateUI() {
+      document.getElementById("studentDisplay").innerHTML = students.join(", ");
+    }
+
+    // Run once on load
+    updateUI();
+
+    function addStudent() {
+      let student = prompt("Enter name:");
+      if (student) {
+        students.push(student);
+        updateUI();
+      }
+    }
+
+    function removeStudent() {
+      students.pop();
+      updateUI();
+    }
+
+    function frontunshift() {
+      let student = prompt("Enter name:");
+      if (student) {
+        students.unshift(student);
+        updateUI();
+      }
+    }
+
+    function frontshift() {
+      students.shift();
+      updateUI();
+    }
+  </script>
+</body>
+</html>
