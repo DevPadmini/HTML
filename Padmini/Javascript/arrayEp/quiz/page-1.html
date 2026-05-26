@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Page</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+
+        background: linear-gradient(
+          rgb(1, 8, 11),
+          rgb(7, 27, 56),
+          rgb(35, 29, 73),
+          rgb(8, 7, 54)
+        );
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .box {
+        width: 60%;
+        height: 100px;
+        border: 3px solid rgb(15, 187, 235);
+        border-radius: 15px;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 30px;
+      }
+
+      .btn-1 {
+        width: 420px;
+        height: 50px;
+        background-color: transparent;
+        border: 3px solid rgb(15, 187, 235);
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+      }
+
+      .btn-1:hover {
+        background-color: rgb(15, 187, 235);
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box"><h2 id="question"></h2></div>
+    <br />
+    <div class="button-group">
+      <button class="btn-1" onclick="checkAnswer('A')" id="a"></button>
+      <button class="btn-1" onclick="checkAnswer('B')" id="b"></button>
+    </div>
+
+    <div class="button-group">
+      <button class="btn-1" onclick="checkAnswer('C')" id="c"></button>
+      <button class="btn-1" onclick="checkAnswer('D')" id="d"></button>
+    </div>
+        
+    <script>
+      let quiz = [
+        {
+          question: "What is 2 + 2 ?",
+          A: "3",
+          B: "4",
+          C: "5",
+          D: "6",
+          answer: "B",
+        },
+        {
+          question: "HTML stands for ?",
+          A: "Hyper Text Markup Language",
+          B: "High Text Machine Language",
+          C: "Home Tool Markup Language",
+          D: "Hyper Tool Multi Language",
+          answer: "A",
+        },
+        {
+          question: "CSS is used for ?",
+          A: "Database",
+          B: "Styling",
+          C: "Server",
+          D: "Compiler",
+          answer: "B",
+        },
+      ];
+
+      let currentQuestion = 0;
+      let points = 0;
+
+      function loadQuestion() {
+        document.getElementById("question").innerText =
+          quiz[currentQuestion].question;
+
+        document.getElementById("a").innerText = quiz[currentQuestion].A;
+
+        document.getElementById("b").innerText = quiz[currentQuestion].B;
+
+        document.getElementById("c").innerText = quiz[currentQuestion].C;
+
+        document.getElementById("d").innerText = quiz[currentQuestion].D;
+      }
+      function checkAnswer(userAnswer){
+
+    if(userAnswer == quiz[currentQuestion].answer){
+        points++;
+    }
+
+    currentQuestion++;
+
+    if(currentQuestion < quiz.length){
+        loadQuestion();
+    }
+   else{
+    document.body.innerHTML =
+    "<h1 style='color:white;'>Quiz Finished</h1>" +
+    "<h2 style='color:white;'>Your Score: " + points + "/" + quiz.length + "</h2>";
+}
+}
+
+loadQuestion(); 
+    </script>
+  </body>
+</html>
