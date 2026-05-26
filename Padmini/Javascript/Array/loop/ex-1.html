@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ?<script>
+        //   splice() -> Add at ANY position
+      let fruits4 = ["Apple", "Banana", "Mango"];
+      fruits4.splice(1, 1); // splice(1,1,"Orange") means:
+      // start from index 1, remove 1 element, and add "Orange" at that position
+      console.log(fruits4);
+    </script> -->
+    <button class="btn" id="btn">Submit</button>
+    <script>
+      let button = document.getElementById("btn");
+
+      button.onclick = function () {
+        let input = prompt("Enter fruit name");
+        let fruits = ["Apple", "Banana", "Mango"];
+        for (let i = 0; i < fruits.length; i++) {
+          console.log(fruits);
+          document.getElementById("btn").innerHTML = fruits
+       
+          let y = fruits[i];
+          if (y == input) {
+            // alert("Fruit Found : " + y + fruits);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add boxes display</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Open Sans", sans-serif;
+      }
+      .box {
+        width: 50%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+        
+      }
+      .box1 {
+        width: 50%;
+        height: 10%;
+        background-color: aqua;
+      }
+      .cont {
+        height: 10%;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+      }
+      .btn {
+        height: 40px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="display"></div>
+
+    <button class="btn" onclick="add()">ADD</button>
+
+    <script>
+      let box =
+        '<div class="box1"> <button class="btn" onclick="remove()">REMOVE</button></div>';
+      function add() {
+        document.getElementById("display").innerHTML += box;
+      }
+
+      function remove() {
+        let display = document.getElementById("display");
+
+        display.innerHTML = display.innerHTML.slice(0, -box.length);
+      }
+    </script>
+  </body>
+</html>

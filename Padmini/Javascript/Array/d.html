@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slice Remove Box</title>
+
+  <style>
+    .box{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .box1{
+      width:100px;
+      height:100px;
+      background:black;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="display" class="box"></div>
+
+<button onclick="addBox()">ADD</button>
+<button onclick="removeBox()">REMOVE</button>
+
+<script>
+
+  function addBox(){
+
+    document.getElementById("display").innerHTML +=
+    '<div class="box1"></div>';
+
+  }
+
+  function removeBox(){
+
+    let display = document.getElementById("display");
+
+    display.innerHTML =
+    display.innerHTML.slice(0,-25);
+
+  }
+
+</script>
+
+</body>
+</html>
