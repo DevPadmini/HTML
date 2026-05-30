@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 600px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: beige;
+        gap: 8px;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 20px;
+        width: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="checkbox" id="read" />READ
+      <br />
+      <input type="checkbox" id="write" />WRITE
+      <br />
+      <input type="checkbox" id="delete" />DELETE
+      <br />
+      <input type="checkbox" id="admin" />ADMIN
+      <br />
+    </div>
+    <button onclick="save()">Save</button>
+
+    <script>
+      const READ = 1;
+      const WRITE = 2;
+      const DELETE = 4;
+      const ADMIN = 8;
+
+      let user = READ | WRITE;
+
+      console.log("Initial:", user);
+
+      user |= DELETE; // Add DELETE
+
+      if (user & READ) {
+        console.log("Can Read");
+      }
+
+      if (user & WRITE) {
+        console.log("Can Write");
+      }
+
+      if (user & DELETE) {
+        console.log("Can Delete");
+      }
+
+      user &= ~WRITE; // Remove WRITE
+
+      console.log("After Remove WRITE:", user);
+    </script>
+  </body>
+</html>

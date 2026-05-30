@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>permission gives</title>
+  </head>
+  <body>
+    <input type="checkbox" id="read" />Read<input />
+    <br />
+    <input type="checkbox" id="write" />Write<input />
+    <br />
+    <br />
+
+    <button onclick="checkpermission()">Check</button>
+    <h2 id="result"></h2>
+
+    <script>
+      const READ = 2;
+      const WRITE = 1;
+
+      function checkpermission() {
+        let permission = 0;
+
+        if (document.getElementById("read").checked) {
+          permission = permission | READ;
+        }
+        if (document.getElementById("write").checked) {
+          permission = permission | WRITE;
+        }
+        document.getElementById("result").innerHTML =
+          "Permisson Value : " + permission;
+      }
+    </script>
+  </body>
+</html>
