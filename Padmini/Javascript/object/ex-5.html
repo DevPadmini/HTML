@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Object Constructors</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      // Constructor Function for Person objects
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      // Create a Person object
+      const myFrd = new Person("Aaruu", "Tripathi", 21, "brown");
+
+      // Display age
+      document.getElementById("demo").innerHTML =
+        "My Friend is " + myFrd.age + ".";
+    </script>
+  </body>
+</html>
