@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  padding:25px;
+  min-height:100vh;
+  background:linear-gradient(
+    135deg,
+    #ff9a9d6a,
+    #fad0c488,
+    #fbc2eb82,
+    #a18cd190
+  );
+}
+
+/* Heading */
+
+h1{
+  text-align:center;
+  margin-bottom:25px;
+  color:rgb(23, 7, 7);
+  font-size:3rem;
+  text-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+/* Filter Buttons */
+
+.filters{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.filters button{
+  padding:12px 25px;
+  border:none;
+  color:white;
+  cursor:pointer;
+  margin:5px;
+  border-radius:30px;
+  font-size:16px;
+  font-weight:bold;
+  background:linear-gradient(45deg,#ff416c,#ff4b2b);
+  transition:.3s;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.filters button:hover{
+  transform:translateY(-4px);
+}
+
+/* Gallery */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+/* Card */
+
+.image{
+  height:220px;
+  overflow:hidden;
+  border-radius:18px;
+  background:white;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  transition:.4s;
+}
+
+.image:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+/* Image */
+
+.image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
+  transition:.5s;
+}
+
+.image:hover img{
+  transform:scale(1.12);
+  filter:brightness(.9) saturate(1.2);
+}
+
+/* Lightbox */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.lightbox-img{
+  width:80%;
+  max-width:900px;
+  max-height:85vh;
+  object-fit:contain;
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(255,255,255,.2);
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:30px;
+  color:white;
+  font-size:45px;
+  cursor:pointer;
+}
+
+.prev,
+.next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(255,255,255,.15);
+  border:none;
+  color:white;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  font-size:30px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.prev:hover,
+.next:hover{
+  background:rgba(255,255,255,.3);
+}
+
+.prev{
+  left:30px;
+}
+
+.next{
+  right:30px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  h1{
+    font-size:2rem;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .image{
+    height:250px;
+  }
+
+  .lightbox-img{
+    width:95%;
+  }
+
+  .prev,
+  .next{
+    width:50px;
+    height:50px;
+    font-size:24px;
+  }
+}
+    </style>
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+  <button onclick="filterImages('animals')">Animals</button>
+</div>
+
+<div class="gallery">
+
+  <div class="image nature">
+     <img src="https://img.magnific.com/free-photo/beautiful-lake-mountains_395237-44.jpg?semt=ais_hybrid&w=740&q=80">
+  </div>
+
+  <div class="image city">
+     <img src="https://images.unsplash.com/photo-1712591009476-5fe03c2ea938?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZXJuJTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D">
+  </div>
+
+  <div class="image animals">
+     <img src="https://images.unsplash.com/photo-1508817628294-5a453fa0b8fb?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2lsZCUyMGFuaW1hbHxlbnwwfHwwfHx8MA%3D%3D">
+  </div>
+
+  <div class="image nature">
+     <img src="https://picjumbo.com/wp-content/uploads/beautiful-nature-wallpaper-spring-flowers-mountain-sunset-free-image.jpg">
+  </div>
+
+  <div class="image city">
+     <img src="https://images.unsplash.com/photo-1724243040324-aa945e452d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D">
+  </div>
+
+  <div class="image animals">
+     <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2lsZGxpZmV8ZW58MHx8MHx8fDA%3D">
+  </div>
+
+  <div class="image nature">
+     <img src="https://www.pixelstalk.net/wp-content/uploads/2025/08/Nature-wallpaper-for-desktop-aesthetic-an-enchanting-sunset-over-a-tranquil-beach-with-gentle-waves-lapping-at-the-shore.jpg">
+  </div>
+
+  <div class="image city">
+     <img src="https://mmhotels.in/wp-content/uploads/2024/01/istockphoto-104731717-612x612-1.jpg">
+  </div>
+
+  <div class="image animals">
+    <img src="https://ichef.bbci.co.uk/ace/standard/715/cpsprodpb/42c7/live/ebd67140-143f-11f0-8171-5360cf2e2e2b.jpg">
+  </div>
+
+  <div class="image nature">
+     <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/330483018/UU/FJ/LO/6461830/nature-wallpaper.jpg">
+  </div>
+
+  <div class="image city">
+    <img src="https://images.unsplash.com/photo-1708580175277-6c171e822f94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vZGVybiUyMGNpdHl8ZW58MHx8MHx8fDA%3D">
+  </div>
+
+  <div class="image animals">
+    <img src="https://121clicks.com/wp-content/uploads/2024/07/indian-wildlife-photography-08.jpg">
+  </div>
+
+  <div class="image nature">
+    <img src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2018/10/bluebells%2C_oxfordshire.jpg?fit=1500%2C1000&ssl=1">
+  </div>
+
+  <div class="image city">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/ac/aa/3f/enjoy-high-japanese-cuisine.jpg?w=1200&s=1">
+  </div>
+
+  <div class="image animals">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3tTxmb_L4ERJtGQW2lBrY-DK7UeRLCc_Nhw&s">
+  </div>
+
+  <div class="image nature">
+    <img src="https://m.media-amazon.com/images/I/71K4EWjvoPL._AC_UF894,1000_QL80_.jpg">
+  </div>
+
+  <div class="image city">
+     <img src="https://toohotel.com/wp-content/uploads/2025/06/TOO_restaurant_Panoramique_vue_Paris_nuit_v2.jpg">
+  </div>
+
+  <div class="image animals">
+    <img src="https://c02.purpledshub.com/uploads/sites/62/2021/09/Silhouetted-elephants.-Chris-Packham.-Remembering-Elephants-da11c3e.jpg">
+  </div>
+
+  <div class="image nature">
+   <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/path-with-bench-in-beautiful-blooming-park-free-image.jpg?w=600&quality=80">
+  </div>
+
+  <div class="image city">
+    <img src="https://c8.alamy.com/comp/2G8D91B/buildings-in-hyderabad-andhra-pradesh-india-home-houses-in-city-street-2G8D91B.jpg">
+  </div>
+
+  <div class="image animals">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMlPHwGILm1e9EGdm_Gd2q77uQhksznWZW6w&s">
+  </div>
+
+  <div class="image nature">
+    <img src="https://t4.ftcdn.net/jpg/04/47/93/19/360_F_447931967_aEUpRfQPcOqJD6eMX1pQwgs1Azy3czL6.jpg">
+  </div>
+
+  <div class="image city">
+    <img src="https://www.bestdesignbooks.eu/wp-content/uploads/2016/11/5-Our-House-in-the-City-New-Urban-Homes-and-Architecture.jpg">
+  </div>
+
+  <div class="image animals">
+    <img src="https://cdn.pixabay.com/photo/2020/03/10/04/48/animal-4917802_1280.jpg">
+  </div>
+
+  <div class="image nature">
+    <img src="https://media.istockphoto.com/id/485371557/photo/twilight-at-spirit-island.jpg?s=612x612&w=0&k=20&c=FSGliJ4EKFP70Yjpzso0HfRR4WwflC6GKfl4F3Hj7fk=">
+  </div>
+
+  <div class="image city">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS62WOm_aGuipiU3sEOOvVEawXT2iwMw3okhA&s">
+  </div>
+
+  <div class="image animals">
+    <img src="https://cdn.pixabay.com/photo/2016/10/22/00/24/hedgehog-1759505_640.jpg">
+  </div>
+
+  <div class="image nature">
+    <img src="https://wallpapers.com/images/featured/nature-pictures-movusen45gmo3tv8.jpg">
+  </div>
+
+  <div class="image city">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOzCpiEkA_lNq_irWzGtgNLoWR0kjXKvYJLw&s">
+  </div>
+
+  <div class="image animals">
+    <img src="https://www.shutterstock.com/image-photo/two-vibrant-peacocks-facing-each-260nw-2657012969.jpg">
+  </div>
+
+</div>
+
+<div class="lightbox">
+  <span class="close">&times;</span>
+
+  <button class="prev">&#10094;</button>
+
+  <img class="lightbox-img">
+
+  <button class="next">&#10095;</button>
+</div>
+
+<script>
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".close");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let currentIndex = 0;
+
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index;
+    showImage();
+    lightbox.style.display = "flex";
+  });
+});
+
+function showImage() {
+  lightboxImg.src = images[currentIndex].src;
+}
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage();
+});
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage();
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+function filterImages(category) {
+  const allImages = document.querySelectorAll(".image");
+
+  allImages.forEach(img => {
+    if (
+      category === "all" ||
+      img.classList.contains(category)
+    ) {
+      img.style.display = "block";
+    } else {
+      img.style.display = "none";
+    }
+  });
+}
+</script>
+</body>
+</html>

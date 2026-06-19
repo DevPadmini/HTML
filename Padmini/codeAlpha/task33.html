@@ -1,0 +1,398 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#061616;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(0,255,200,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,200,.05) 1px, transparent 1px);
+    background-size:40px 40px;
+    z-index:-1;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.5);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00ffc8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ffc8;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero-content img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:3px solid #00ffc8;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#00ffc8;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#bbb;
+    line-height:1.8;
+}
+
+.btns{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    margin:10px;
+    transition:.4s;
+}
+
+.primary{
+    background:#00ffc8;
+    color:black;
+}
+
+.secondary{
+    border:2px solid #00ffc8;
+    color:#00ffc8;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Sections */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+    color:#00ffc8;
+}
+
+/* About */
+
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:#0b2323;
+    padding:25px;
+    border:1px solid rgba(0,255,200,.2);
+    text-align:center;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.skill:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(0,255,200,.2);
+}
+
+/* Projects */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:#0b2323;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.project img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+}
+
+.project h3{
+    margin-bottom:10px;
+}
+
+.project p{
+    color:#bbb;
+}
+
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact{
+    max-width:600px;
+    margin:auto;
+}
+.contact p{
+    max-width:800px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.8;
+}
+
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#888;
+}
+
+/* Animation */
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:36px;
+}
+
+nav ul{
+    gap:12px;
+    font-size:14px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Portfolio</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <!-- <img src="https://via.placeholder.com/150" alt=""> -->
+        <h1>Hi, I'm <span>Padmini Bhange</span></h1>
+        <h3><p>
+            Front-End Developer passionate about creating modern,
+            responsive and user-friendly web applications.
+        </p></h3>
+
+        <div class="btns">
+            <a href="#" class="btn primary">Download Resume</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="hidden">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+       <h3> <p>
+            I am a web developer skilled in HTML, CSS, JavaScript and React.
+            I enjoy building responsive websites and solving real-world
+            problems through code.
+        </p>
+        </h3>
+    </div>
+</section>
+
+<section id="skills" class="hidden">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">GitHub</div>
+    </div>
+</section>
+
+<section id="projects" class="hidden">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project">
+            <img src="https://ps.w.org/responsive-gallery-grid/assets/screenshot-1.gif?rev=1801903">
+            <div class="project-content">
+                <h3>Image Gallery</h3>
+                   <p>Beautiful photo gallery featuring smooth animations, filtering options, and responsive layouts.</p>
+
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://pngimg.com/uploads/calculator/calculator_PNG7939.png">
+            <div class="project-content">
+                <h3>Calculator App</h3>
+                <p>Responsive calculator using JavaScript.</p>
+            </div>
+        </div>
+<!-- 
+        <div class="project">
+            <img src="https://picsum.photos/500/300?3">
+            <div class="project-content">
+                <h3>Food Delivery App</h3>
+                <p>UI design with cart and order management.</p>
+            </div>
+        </div> -->
+
+    </div>
+</section>
+
+<section id="contact" class="hidden">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact"><h3>
+<br>
+    <p>Email: pbhange265@gmail.com</p>
+<br>
+    <p>Phone: +91 8625999873</p>
+    <br>
+
+    <p>Location: Nagpur, India</p>
+
+    <a href="pbhange265@gmail.com" class="btn">
+        Send Message
+    </a>
+</h3>
+    </div>
+</section>
+
+<footer>
+    © 2026 Your Name | Portfolio Website
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
