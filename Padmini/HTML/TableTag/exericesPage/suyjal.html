@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discount Calculator</title>
+  </head>
+  <body>
+    <!-- User Input Fields -->
+    <h2>Discount Calculator</h2>
+    <label for="amountInput">Enter Total Purchase Amount (₹): </label>
+    <input type="number" id="amountInput" placeholder="e.g. 2000" />
+    
+    <!-- Corrected Button -->
+    <button onclick="handleCalculation()">Calculate Discount</button>
+
+    <!-- Display Area for Result -->
+    <h3 id="resultDisplay"></h3>
+
+    <script>
+      // Main calculation function (remains the same)
+      function calculateFinalAmount(totalAmount) {
+          let discountRate = 0;
+
+          if (totalAmount < 1000) {
+              discountRate = 0;
+          } else if (totalAmount >= 1000 && totalAmount <= 4999) {
+              discountRate = 0.05; // 5% discount
+          } else if (totalAmount >= 5000) {
+              discountRate = 0.10; // 10% discount
+          }
+
+          const finalAmount = totalAmount * (1 - discountRate);
+          return finalAmount;
+      }
+
+      // Handler function to connect HTML elements to the logic
+      function handleCalculation() {
+          // Get the value from the input field
+          const inputVal = document.getElementById("amountInput").value;
+          const totalAmount = parseFloat(inputVal);
+
+          // Validate input
+          if (isNaN(totalAmount) || totalAmount < 0) {
+              document.getElementById("resultDisplay").innerText = "Please enter a valid amount.";
+              return;
+          }
+
+          // Run calculation and update screen
+          const finalAmount = calculateFinalAmount(totalAmount);
+          document.getElementById("resultDisplay").innerText = `Final Payable Amount: ₹${finalAmount.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>

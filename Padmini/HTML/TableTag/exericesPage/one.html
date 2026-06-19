@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Table</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        background: #4b00b5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+      }
+
+      .table-container {
+        width: 100%;
+        max-width: 1100px;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      th {
+        height: 70px;
+        color: white;
+        font-size: 20px;
+      }
+
+      td {
+        padding: 25px;
+        font-size: 18px;
+        color: #444;
+      }
+
+      .left-box {
+        width: 35%;
+        text-align: left;
+        padding-left: 35px;
+        background: #f5f5f5;
+      }
+
+      .title {
+        font-size: 40px;
+        color: #3c008f;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .free {
+        background: #ff4d5a;
+      }
+
+      .personal {
+        background: #7a49b6;
+      }
+
+      .business {
+        background: #5c249c;
+      }
+
+      .enterprise {
+        background: #3b008f;
+      }
+
+      .price {
+        font-size: 45px;
+        color: #4b00b5;
+        font-weight: bold;
+      }
+
+      .month {
+        font-size: 25px;
+      }
+
+      .storage {
+        font-size: 35px;
+        color: #3c008f;
+        font-weight: bold;
+      }
+
+      .check {
+        color: #2ecc71;
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      .cross {
+        color: #ff4d5a;
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background: #fafafa;
+      }
+
+      button {
+        width: 170px;
+        height: 55px;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .btn-free {
+        background: #ff4d5a;
+      }
+
+      .btn-purple {
+        background: #5c249c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th class="left-box"></th>
+          <th class="free">Free</th>
+          <th class="personal">Personal</th>
+          <th class="business">Business</th>
+          <th class="enterprise">Enterprise</th>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            <div class="title">Pricing Table</div>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh
+          </td>
+
+          <td>
+            <span>$</span>
+            <span class="price">0</span>
+            <span class="month">/mo</span>
+          </td>
+
+          <td>
+            <span>$</span>
+            <span class="price">19</span>
+            <span class="month">/mo</span>
+          </td>
+
+          <td>
+            <span>$</span>
+            <span class="price">99</span>
+            <span class="month">/mo</span>
+          </td>
+
+          <td>
+            <span>$</span>
+            <span class="price">199</span>
+            <span class="month">/mo</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </td>
+
+          <td class="storage">64 Gb</td>
+          <td class="storage">256 Gb</td>
+          <td class="storage">512 Gb</td>
+          <td class="storage">1TB</td>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </td>
+
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </td>
+
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </td>
+
+          <td class="cross">✖</td>
+          <td class="cross">✖</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </td>
+
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </td>
+
+          <td class="cross">✖</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+        </tr>
+
+        <tr>
+          <td class="left-box">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </td>
+
+          <td class="cross">✖</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+          <td class="check">✔</td>
+        </tr>
+
+        <tr>
+          <td class="left-box"></td>
+
+          <td>
+            <button class="btn-free">Get Start</button>
+          </td>
+
+          <td>
+            <button class="btn-purple">Buy Now</button>
+          </td>
+
+          <td>
+            <button class="btn-purple">Buy Now</button>
+          </td>
+
+          <td>
+            <button class="btn-purple">Buy Now</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

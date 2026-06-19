@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing Table</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+     
+    }
+
+    body{
+      background-color:aliceblue;
+    }
+
+    .main-container{
+      width:100%;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      background:linear-gradient(rgb(4, 19, 41), rgb(16, 21, 27));
+      padding:40px;
+      border-radius:15px;
+      overflow:auto;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      text-align:center;
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    td, th{
+      border:1px solid #ddd;
+      padding:20px;
+    }
+
+    th{
+      color:white;
+      font-size:20px;
+    }
+
+    .feature{
+      background:#f4f4f4;
+      font-weight:bold;
+      width:30%;
+      text-align:left;
+    }
+
+    .free{
+      background:#6c757d;
+      color:white;
+    }
+
+    .personal{
+      background:#ff9800;
+      color:white;
+    }
+
+    .business{
+      background:#4caf50;
+      color:white;
+    }
+
+    .enterprise{
+      background:#9c27b0;
+      color:white;
+    }
+
+    tr:nth-child(even){
+      background:#f9f9f9;
+    }
+
+    .check{
+      color:green;
+      font-size:20px;
+    }
+
+    .cross{
+      color:red;
+      font-size:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="main-container">
+
+  <div class="container">
+
+    <table>
+
+      <tr>
+        <th class="feature">Plan</th>
+        <th class="free">Free</th>
+        <th class="personal">Personal</th>
+        <th class="business">Business</th>
+        <th class="enterprise">Enterprise</th>
+      </tr>
+
+      <tr>
+        <td class="feature">Price</td>
+        <td>$0 / mo</td>
+        <td>$19 / mo</td>
+        <td>$99 / mo</td>
+        <td>$199 / mo</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Storage</td>
+        <td>64 GB</td>
+        <td>256 GB</td>
+        <td>512 GB</td>
+        <td>1 TB</td>
+      </tr>
+
+      <tr>
+        <td class="feature">24/7 Support</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Cloud Backup</td>
+        <td class="cross">❌</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Analytics</td>
+        <td class="cross">❌</td>
+        <td class="cross">❌</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Custom Domain</td>
+        <td class="cross">❌</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+        <td class="check">✅</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>
+
+</body>
+</html>
